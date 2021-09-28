@@ -23,14 +23,14 @@ const Forgot = () => {
 
   return (
     <div>
-      <div class="loginwrap">
-        <div class="pgaddressrow">
-          <h1 class="heading">Login / Register</h1>
-          <h4 class="smheading">
+      <div className="loginwrap">
+        <div className="pgaddressrow">
+          <h1 className="heading">Login / Register</h1>
+          <h4 className="smheading">
             <a href="/login ">Home</a> / Login / <a href="/forgot ">Forgot</a>
           </h4>
         </div>
-        <div class="loginformCon">
+        <div className="loginformCon">
           <h2>FORGOT</h2>
 
           <Formik
@@ -42,8 +42,8 @@ const Forgot = () => {
               <Form>
                 <div className="loginforminputs">
                   <div className="form-group">
-                    <label>Enter Your Email</label>
-                    <Field name="email" className="form-control" type="email" />
+                    <label>Username or Email Address</label>
+                    <Field name="email" className="form-control" type="text" />
                     <ErrorMessage name="email" />
                   </div>
                   <div className="loginbtnrow">

@@ -3,7 +3,7 @@ import "../style/Login.css";
 import { Form, Field, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-const Register = () => {
+const Signup = () => {
   const initialValues = {
     first: "",
     last: "",
@@ -17,25 +17,24 @@ const Register = () => {
   const validationSchema = Yup.object().shape({
     first: Yup.string()
 
-      .required("Required")
+      .required("*Required")
       .min(3, "Too short Name"),
     // .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,"Number & special character is restricted"),
 
     // last: Yup.string().last("Enter valid LastName").require("Required")
     // .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,"Number & special character is restricted"),
 
-    email: Yup.string().email("Enter valid Email").required("Required"),
+    email: Yup.string().email("Enter valid Email").required("*Required"),
 
     password: Yup.string()
       .min(8, "Password minimum length should be 8")
       .required("*Required")
       .matches(/(?=.*[0-9])/, "Password must contain a number."),
 
-    shopurl: Yup.string()
-      .required("*Website should be a valid URL")
-      .matches(
-        /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/
-      ),
+    shopurl: Yup.string().matches(
+      /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+      "Website should be a valid URL"
+    ),
 
     phoneno: Yup.number()
       .typeError("Enter valid Phone Number")
@@ -43,7 +42,7 @@ const Register = () => {
 
     shopname: Yup.string()
 
-      .required("*Required")
+      // .required("Required")
       .min(3, "Too short Name"),
     user: Yup.string().required("*Required"),
   });
@@ -154,11 +153,9 @@ const Register = () => {
                           class="form-control"
                           type="text"
                           placeholder="Enter Shop-URL"
+                          disabled
                         />
-                        {/* <ErrorMessage name="shopurl" /> */}
-                        <div className="error">
-                          <ErrorMessage name="shopurl" />
-                        </div>
+                        <ErrorMessage name="shopurl" />
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -184,11 +181,9 @@ const Register = () => {
                         name="shopname"
                         class="form-control"
                         placeholder="Enter Shop Name"
+                        disabled
                       ></Field>
-                      {/* <ErrorMessage name="shopname" /> */}
-                      <div className="error">
-                        <ErrorMessage name="shopname" />
-                      </div>
+                      <ErrorMessage name="shopname" />
                     </div>
                   </div>
                 </div>
@@ -209,12 +204,12 @@ const Register = () => {
                         disabled
                       />{" "}
                       <a
-                        href="/signup "
+                        href="/register "
                         className="signupterms"
                         // style={{ color: "gold" }}
                       >
-                        I am a Customer
-                      </a>{" "}
+                        I am a Vendor
+                      </a>
                     </div>
                     <div
                       class="chooseone"
@@ -227,22 +222,22 @@ const Register = () => {
                       <div className="error">
                         <ErrorMessage name="user" />
                       </div>
-                      <Field type="radio" name="user" value="Vendor" /> I am a
-                      Vendor
+                      <Field type="radio" name="user" value="Customer" /> I am a
+                      Customer
                       {/* <Field
                         type="radio"
                         name="radio-group "
                         style={{ marginRight: "5px" }}
-                      />{" "}
-                      <a
-                        href="/register "
-                        className="signupterms"
-                        // style={{ color: "gold" }}
-                      >
-                        I am a Vendor
-                      </a> */}
+                      />{" "} */}
                     </div>
                     {/* <ErrorMessage  name="first"/> */}
+                    {/* <a
+                      href="/signup "
+                      className="signupterms"
+                      //   style={{ color: "gold" }}
+                    >
+                      I am a Customer
+                    </a> */}
                   </div>
                 </div>
 
@@ -270,4 +265,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Signup;

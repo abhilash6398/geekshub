@@ -11,23 +11,39 @@ const Login = () => {
     rememberMe: false,
   };
   const validationSchema = Yup.object().shape({
-    // email: Yup.string().email("Enter valid Email").required("Required"),
+    // email: Yup.string().email("Enter valid Email").required("*Required"),
 
     password: Yup.string()
       .min(8, "Password minimum length should be 8")
-      .required("Required")
+      .required("*Required")
       .matches(/(?=.*[0-9])/, "Password must contain a number."),
 
     // rememberMe: Yup.string().oneOf(["true"], "Accept terms & conditions"),
   });
 
-  const onSubmit = async (values, props) => {
-    try {
-      props.setSubmitting(false);
+  const onSubmit = (values, props) => {
+    console.log(values);
+
+    setTimeout(() => {
       props.resetForm();
-    } catch (error) {
       props.setSubmitting(false);
-    }
+    }, 2000);
+    // return axios({
+    //   method: "POST",
+    //   url: "http://3.109.247.241:6778/api/v2/customer/signin",
+    //   data: values,
+    //   // auth: {
+    //   //   email,
+    //   //   password
+    //   // }
+    // })
+    //   .then((response) => {
+    //     props.setSubmitting(false);
+    //     props.resetForm();
+    //   })
+    //   .catch((error) => {
+    //     props.setSubmitting(false);
+    //   });
 
     // this shouldn't be outside the .then/.catch
     // if you are going to use .then/.catch, put the above line inside it
@@ -35,20 +51,12 @@ const Login = () => {
     // Router.push("/")
   };
 
-  // console.log(values);
-
-  //       setTimeout(() => {
-
-  //           props.resetForm()
-  //           props.setSubmitting(false)
-  //       }, 2000)
-
   return (
     <div>
       <div className="pgaddressrow">
         <h1 className="heading">Login / Register</h1>
         <h4 className="smheading">
-          <a href="/login">Home</a> / Login / <a href="/signup ">Register</a>
+          <a href="/">Home</a> / Login / <a href="/signup ">Register</a>
         </h4>
       </div>
 
@@ -67,8 +75,11 @@ const Login = () => {
                 <div className="form-group">
                   <label>Username or email address</label>
 
-                  <Field name="email" className="form-control" type="email" />
-                  <ErrorMessage name="email" />
+                  <Field name="email" className="form-control" type="text" />
+                  {/* <ErrorMessage name="email" /> */}
+                  <div className="error">
+                    <ErrorMessage name="email" />
+                  </div>
                 </div>
 
                 <div className="form-group">
@@ -79,7 +90,10 @@ const Login = () => {
                     className="form-control"
                     type="password"
                   />
-                  <ErrorMessage name="password" />
+                  {/* <ErrorMessage name="password" /> */}
+                  <div className="error">
+                    <ErrorMessage name="password" />
+                  </div>
                 </div>
 
                 <div className="loginbtnrow">

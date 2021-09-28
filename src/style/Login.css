@@ -112,3 +112,12 @@
 	color: #feb600;
 	display: inline-block;
 }
+.signupterms a:hover{
+	color: #6d6d6d;
+	display: inline-block;
+}
+.error{
+	color: red;
+	font-size: 16px;
+	font-weight: 400;
+}
