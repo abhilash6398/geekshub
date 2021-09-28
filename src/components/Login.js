@@ -61,7 +61,7 @@ const Login = () => {
 
       <div className="pgaddressrow">
         <h1 className="heading">Login / Register</h1>
-        <h4 className="smheading"><a href=" ">Home</a> / login / <a href=" ">Register</a></h4>
+        <h4 className="smheading"><a href="/login">Home</a> / Login / <a href="/signup ">Register</a></h4>
       </div>
 
       <div className="loginformCon">
@@ -113,7 +113,7 @@ const Login = () => {
                 </div>
                 <div 
                 className="lostyourpasswordrw">
-                  <a href=" ">Lost your password?</a></div>
+                  <a href="/forgot ">Lost your password?</a></div>
               </div>
 
             </Form>
