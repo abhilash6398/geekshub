@@ -7,7 +7,7 @@ const Nav = () => {
     <div className="Nav__head">
       <Navbar bg="light" sticky="top">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               src={logo}
               width="75"
