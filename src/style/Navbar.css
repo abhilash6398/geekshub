@@ -66,3 +66,7 @@
 
   /* margin: 10px; */
 }
+
+.Nav_Bar:hover {
+    color:#feb600;
+}

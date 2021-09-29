@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 const Nav = () => {
   return (
     <div className="Nav__head">
-      <Navbar bg="light">
+      <Navbar bg="light" sticky="top">
         <Container>
           <Navbar.Brand href="#home">
             <img

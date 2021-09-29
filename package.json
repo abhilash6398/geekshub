@@ -2,6 +2,7 @@
   "name": "geekshub",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://abhilash6398.github.io/geekshub/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -19,9 +20,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build && cp build/index.html build/404.html"
   },
   "eslintConfig": {
     "extends": [

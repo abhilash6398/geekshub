@@ -4,7 +4,7 @@ import axios from "axios";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-const Login = () => {
+export default function Login() {
   const initialValues = {
     email: "",
     password: "",
@@ -20,36 +20,54 @@ const Login = () => {
 
     // rememberMe: Yup.string().oneOf(["true"], "Accept terms & conditions"),
   });
-
-  const onSubmit = (values, props) => {
-    console.log(values);
-
-    setTimeout(() => {
-      props.resetForm();
-      props.setSubmitting(false);
-    }, 2000);
-    // return axios({
-    //   method: "POST",
-    //   url: "http://3.109.247.241:6778/api/v2/customer/signin",
-    //   data: values,
-    //   // auth: {
-    //   //   email,
-    //   //   password
-    //   // }
-    // })
-    //   .then((response) => {
-    //     props.setSubmitting(false);
-    //     props.resetForm();
-    //   })
-    //   .catch((error) => {
-    //     props.setSubmitting(false);
-    //   });
-
-    // this shouldn't be outside the .then/.catch
-    // if you are going to use .then/.catch, put the above line inside it
-    // authenticate.login();
-    // Router.push("/")
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const data = {
+      email,
+      password,
+    };
+    axios
+      .post("http://3.109.247.241:6778/api/v2/customer/signin", data)
+      .then((response) => {
+        console.log(response);
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
+  // const onSubmit = (values, props) => {
+  //   console.log(values);
+
+  //   setTimeout(() => {
+  //     props.resetForm();
+  //     props.setSubmitting(false);
+  //   }, 2000);
+  // return axios({
+  //   method: "POST",
+  //   url: "http://3.109.247.241:6778/api/v2/customer/signin",
+  //   data: values,
+  //   // auth: {
+  //   //   email,
+  //   //   password
+  //   // }
+  // })
+  //   .then((response) => {
+  //     props.setSubmitting(false);
+  //     props.resetForm();
+  //   })
+  //   .catch((error) => {
+  //     props.setSubmitting(false);
+  //   });
+
+  // this shouldn't be outside the .then/.catch
+  // if you are going to use .then/.catch, put the above line inside it
+  // authenticate.login();
+  // Router.push("/")
+  // };
 
   return (
     <div>
@@ -67,10 +85,10 @@ const Login = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={onSubmit}
+          
         >
           {(props) => (
-            <Form>
+            <Form onSubmit={onSubmit}>
               <div className="loginforminputs">
                 <div className="form-group">
                   <label>Username or email address</label>
@@ -122,6 +140,4 @@ const Login = () => {
       </div>
     </div>
   );
-};
-
-export default Login;
+}

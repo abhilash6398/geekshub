@@ -2,6 +2,7 @@ import React from "react";
 import "../style/Login.css";
 import { Form, Field, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 const Register = () => {
   const initialValues = {
@@ -18,6 +19,10 @@ const Register = () => {
     first: Yup.string()
 
       .required("Required")
+      .min(3, "Too short Name"),
+    username: Yup.string()
+
+      .required("*Required")
       .min(3, "Too short Name"),
     // .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,"Number & special character is restricted"),
 
@@ -48,14 +53,47 @@ const Register = () => {
     user: Yup.string().required("*Required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
-    // console.log(props)
-    setTimeout(() => {
-      props.resetForm();
-      props.setSubmitting(false);
-    }, 2000);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const first = event.target.first.value;
+    const last = event.target.last.value;
+    // const phoneno = event.target.phoneno.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const shopname = event.target.shopname.value;
+    const shopurl = event.target.shopurl.value;
+    const username = event.target.username.value;
+    const user = event.target.user.value;
+    const data = {
+      first,
+      last,
+      // phoneno,
+      email,
+      password,
+      user,
+      shopurl,
+      shopname,
+      username,
+    };
+    axios
+      .post("http://3.109.247.241:6778/api/v2/customer/signup", data)
+      .then((response) => {
+        console.log(response);
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
+  // const onSubmit = (values, props) => {
+  //   console.log(values);
+  //   // console.log(props)
+  //   setTimeout(() => {
+  //     props.resetForm();
+  //     props.setSubmitting(false);
+  //   }, 2000);
+  // };
 
   return (
     <div>
@@ -72,10 +110,9 @@ const Register = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={onSubmit}
         >
           {(props) => (
-            <Form>
+            <Form onSubmit={onSubmit}>
               <div class="loginforminputs">
                 <div class="imvendwrap">
                   <div class="row clearfix">
@@ -163,16 +200,16 @@ const Register = () => {
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Phone Number</label>
+                        <label>Username</label>
                         <Field
-                          name="phoneno"
+                          name="username"
                           class="form-control"
                           type="text"
-                          placeholder="Enter Phone Number"
+                          placeholder="Username"
                         />
                         {/* <ErrorMessage name="phoneno" /> */}
                         <div className="error">
-                          <ErrorMessage name="phoneno" />
+                          <ErrorMessage name="username" />
                         </div>
                       </div>
                     </div>
@@ -211,7 +248,7 @@ const Register = () => {
                       <a
                         href="/signup "
                         className="signupterms"
-                        // style={{ color: "gold" }}
+                        style={{ fontFamily: "inherit" }}
                       >
                         I am a Customer
                       </a>{" "}

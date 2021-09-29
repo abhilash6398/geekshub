@@ -2,20 +2,25 @@ import React from "react";
 import "../style/Login.css";
 import { Form, Field, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
-const Signup = () => {
+export default function Signup() {
   const initialValues = {
     first: "",
     last: "",
     email: "",
     password: "",
     shopurl: "",
-    phoneno: "",
+    // phoneno: "",
     shopname: "",
   };
 
   const validationSchema = Yup.object().shape({
     first: Yup.string()
+
+      .required("*Required")
+      .min(3, "Too short Name"),
+    username: Yup.string()
 
       .required("*Required")
       .min(3, "Too short Name"),
@@ -47,14 +52,42 @@ const Signup = () => {
     user: Yup.string().required("*Required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
-    // console.log(props)
-    setTimeout(() => {
-      props.resetForm();
-      props.setSubmitting(false);
-    }, 2000);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const first = event.target.first.value;
+    const last = event.target.last.value;
+    // const phoneno = event.target.phoneno.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const username = event.target.username.value;
+    const user = event.target.user.value;
+    const data = {
+      first,
+      last,
+    //   phoneno,
+      email,
+      password,
+      user,
+      username,
+    };
+    axios
+      .post("http://3.109.247.241:6778/api/v2/customer/signup", data)
+      .then((response) => {
+        console.log(response);
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+  //   const onSubmit = (values, props) => {
+  //     console.log(values);
+  //     // console.log(props)
+  //     setTimeout(() => {
+  //       props.resetForm();
+  //       props.setSubmitting(false);
+  //     }, 2000);
+  //   };
 
   return (
     <div>
@@ -71,10 +104,9 @@ const Signup = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={onSubmit}
         >
           {(props) => (
-            <Form>
+            <Form onSubmit={onSubmit}>
               <div class="loginforminputs">
                 <div class="imvendwrap">
                   <div class="row clearfix">
@@ -160,16 +192,16 @@ const Signup = () => {
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Phone Number</label>
+                        <label>Username</label>
                         <Field
-                          name="phoneno"
+                          name="username"
                           class="form-control"
                           type="text"
-                          placeholder="Enter Phone Number"
+                          placeholder="Enter Username"
                         />
                         {/* <ErrorMessage name="phoneno" /> */}
                         <div className="error">
-                          <ErrorMessage name="phoneno" />
+                          <ErrorMessage name="username" />
                         </div>
                       </div>
                     </div>
@@ -206,7 +238,7 @@ const Signup = () => {
                       <a
                         href="/register "
                         className="signupterms"
-                        // style={{ color: "gold" }}
+                        style={{ fontFamily: "inherit" }}
                       >
                         I am a Vendor
                       </a>
@@ -263,6 +295,4 @@ const Signup = () => {
       </div>
     </div>
   );
-};
-
-export default Signup;
+}
