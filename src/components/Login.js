@@ -74,7 +74,7 @@ export default function Login() {
       <div className="pgaddressrow">
         <h1 className="heading">Login / Register</h1>
         <h4 className="smheading">
-          <a href="/">Home</a> / Login / <a href="/signup ">Register</a>
+          <a href="/" style={{textDecoration:"none"}}>Home</a> / Login / <a href="/signup " style={{textDecoration:"none"}}>Register</a>
         </h4>
       </div>
 

@@ -6,8 +6,8 @@ import axios from "axios";
 
 export default function Signup() {
   const initialValues = {
-    first: "",
-    last: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     shopurl: "",
@@ -17,7 +17,7 @@ export default function Signup() {
   };
 
   const validationSchema = Yup.object().shape({
-    first: Yup.string()
+    firstName: Yup.string()
 
       .required("*Required")
       .min(3, "Too short Name"),
@@ -55,16 +55,16 @@ export default function Signup() {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const first = event.target.first.value;
-    const last = event.target.last.value;
+    const firstName = event.target.first.value;
+    const lastName = event.target.last.value;
     // const phoneno = event.target.phoneno.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
     const username = event.target.username.value;
     const user = event.target.user.value;
     const data = {
-      first,
-      last,
+      firstName,
+      lastName,
     //   phoneno,
       email,
       password,
@@ -95,7 +95,7 @@ export default function Signup() {
       <div class="pgaddressrow">
         <h1 class="heading">Login / Register</h1>
         <h4 class="smheading">
-          <a href="/">Home</a> / Login / <a href="/signup ">Register</a>
+          <a href="/" style={{textDecoration:"none"}}>Home</a> / Login / <a href="/signup " style={{textDecoration:"none"}}>Register</a>
         </h4>
       </div>
       <div class="loginformCon signup">
@@ -116,14 +116,14 @@ export default function Signup() {
                       <div class="form-group">
                         <label>First Name</label>
                         <Field
-                          name="first"
+                          name="firstName"
                           class="form-control"
                           type="text"
-                          placeholder="Enter First"
+                          placeholder="Enter FirstName"
                         />
                         {/* <ErrorMessage name="first" /> */}
                         <div className="error">
-                          <ErrorMessage name="first" />
+                          <ErrorMessage name="firstName" />
                         </div>
                       </div>
                     </div>
@@ -131,14 +131,14 @@ export default function Signup() {
                       <div class="form-group">
                         <label>Last Name</label>
                         <Field
-                          name="last"
+                          name="lastName"
                           class="form-control"
                           type="text"
                           placeholder="(Optional)"
                         />
                         {/* <ErrorMessage name="last" /> */}
                         <div className="error">
-                          <ErrorMessage name="last" />
+                          <ErrorMessage name="lastName" />
                         </div>
                       </div>
                     </div>

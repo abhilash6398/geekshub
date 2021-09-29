@@ -27,7 +27,7 @@ const Forgot = () => {
         <div className="pgaddressrow">
           <h1 className="heading">Login / Register</h1>
           <h4 className="smheading">
-            <a href="/login ">Home</a> / Login / <a href="/forgot ">Forgot</a>
+            <a href="/login " style={{textDecoration:"none"}}>Home</a> / Login / <a href="/forgot " style={{textDecoration:"none"}}>Forgot</a>
           </h4>
         </div>
         <div className="loginformCon">
