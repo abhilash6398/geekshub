@@ -13,6 +13,7 @@ const Register = () => {
     shopurl: "",
     phoneno: "",
     shopname: "",
+    username:""
   };
 
   const validationSchema = Yup.object().shape({
@@ -110,9 +111,10 @@ const Register = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
+          onSubmit={onSubmit}
         >
           {(props) => (
-            <Form onSubmit={onSubmit}>
+            <Form>
               <div class="loginforminputs">
                 <div class="imvendwrap">
                   <div class="row clearfix">

@@ -11,7 +11,7 @@ export default function Login() {
     rememberMe: false,
   };
   const validationSchema = Yup.object().shape({
-    // email: Yup.string().email("Enter valid Email").required("*Required"),
+    email: Yup.string().email("Enter valid Email").required("*Required"),
 
     password: Yup.string()
       .min(8, "Password minimum length should be 8")
@@ -85,10 +85,10 @@ export default function Login() {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          
+          onSubmit={onSubmit}
         >
           {(props) => (
-            <Form onSubmit={onSubmit}>
+            <Form>
               <div className="loginforminputs">
                 <div className="form-group">
                   <label>Username or email address</label>

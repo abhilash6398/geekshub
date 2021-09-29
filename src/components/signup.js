@@ -13,6 +13,7 @@ export default function Signup() {
     shopurl: "",
     // phoneno: "",
     shopname: "",
+    username:""
   };
 
   const validationSchema = Yup.object().shape({
@@ -52,7 +53,7 @@ export default function Signup() {
     user: Yup.string().required("*Required"),
   });
 
-  const onSubmit = (event) => {
+  const submitHandler = (event) => {
     event.preventDefault();
     const first = event.target.first.value;
     const last = event.target.last.value;
@@ -104,9 +105,10 @@ export default function Signup() {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
+          onSubmit={submitHandler}
         >
           {(props) => (
-            <Form onSubmit={onSubmit}>
+            <Form >
               <div class="loginforminputs">
                 <div class="imvendwrap">
                   <div class="row clearfix">
