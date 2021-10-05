@@ -58,7 +58,7 @@ export default function Login({ setToken }) {
             Home
           </a>{" "}
           / Login /{" "}
-          <a style={{ textDecoration: "none" }} href="/register ">
+          <a style={{ textDecoration: "none" }} href="/vendor ">
             Register
           </a>
         </h4>

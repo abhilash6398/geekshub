@@ -75,7 +75,7 @@ const Nav = () => {
         </div>
         <div className="icon__name">
           <ul>
-            <li>Account</li>
+            <li><a href="/profile">Account</a></li>
             <li>Wishlist</li>
             <li>Cart</li>
             <li>Search</li>

@@ -26,15 +26,13 @@ function App() {
   return (
     <>
       <Nav />
+      <div className="container">
       <h4 class="smheading">
-        <a href="/home">Home</a>/ <a href="/profile">My Profile</a>/{" "}
-        <a href="/vendor">Vendor Reg.</a>/{" "}
-        <a href="/login" className="nav-link" onClick={logOut}>
-          LogOut
-        </a>
+        {/* <a href="/home"> Home </a> / <a href="/profile">My Profile</a> /{" "} */}
+        <a href="/vendor" > Vendor Reg.</a> / <a href="/login" onClick={logOut}>LogOut</a>
         {/* / <a href="/vendor">Logout</a> */}
       </h4>
-
+      </div>
       <Router>
         <Switch>
           <Route path="/home">

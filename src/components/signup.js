@@ -38,7 +38,7 @@ export default function Signup() {
       .matches(/(?=.*[0-9])/, "Password must contain a number."),
 
     shopurl: Yup.string().matches(
-      /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+      // /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
       "Website should be a valid URL"
     ),
 
@@ -95,7 +95,7 @@ export default function Signup() {
       <div class="pgaddressrow">
         <h1 class="heading">Login / Register</h1>
         <h4 class="smheading">
-          <a href="/" style={{ textDecoration: "none" }}>
+          <a href="/home" style={{ textDecoration: "none" }}>
             Home
           </a>{" "}
           / Login /{" "}
@@ -244,7 +244,7 @@ export default function Signup() {
                         disabled
                       />{" "}
                       <a
-                        href="/register "
+                        href="/vendor "
                         className="signupterms"
                         style={{ fontFamily: "inherit" }}
                       >

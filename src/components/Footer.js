@@ -199,11 +199,11 @@ export default function FooterComponent() {
             </div>
             {/* <!-- Grid row --> */}
           </div>
+          <hr style={{color: "#feb600" , height:"10px"}} />
         </section>
         {/* <!-- Section: Links  --> */}
       </footer>
       {/* <!-- Footer --> */}
-      <hbr style={{color:"gold"}}/>
       <br/>
     </>
   );
