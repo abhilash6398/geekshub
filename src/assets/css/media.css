@@ -1,0 +1,940 @@
+@media only screen and (max-width: 1800px) {
+.headerrtsnav{
+	right: 140px;
+}
+.searchboxh {
+    right: 60px;
+}
+.navbar-default .container{
+	padding: 0 60px;
+}
+}
+@media only screen and (max-width: 1600px) {
+.pgaddressrow h1.heading{
+	font-size: 32px;
+}
+.pgaddressrow h4.smheading{
+	font-size: 16px;
+}
+.loginformCon h4{
+	font-size: 18px;
+}
+.loginformCon h2 {
+    font-size: 44px;
+}
+.tabsfeature .nav-tabs > li > a{
+	font-size: 21px;
+}
+.collectionConbx .cellecheading{
+	font-size: 32px;
+	line-height: 36px;
+}
+.collectionConbx .cellecheadingsm{
+	font-size: 20px;
+}
+.conheadings{
+	font-size: 28px;
+}
+.contactformSection h2{
+    font-size: 34px;
+}
+.geekprodetailsCon {
+    padding-bottom: 50px;
+}
+.cartnotifCon .loginbtnrow {
+    padding-top: 30px;
+}
+.cartnotifCon .subtotalrw{
+    margin-top: 10px;
+}
+.cartnotifCon h3 {
+    margin-bottom: 35px;
+}
+}
+@media only screen and (max-width: 1440px) {
+.homepgmiddleCon{
+	max-width:initial;
+	padding: 40px 60px;
+	padding-bottom: 0;
+}
+.tabsfeature,#brandslogo{
+    max-width:initial;
+    padding: 0 45px;
+}
+#vc_row_1579195378932-07a11792-9294 {
+    max-width: initial;
+    padding: 60px;
+}
+.shopbyintrest,.collectionsliderwarp{
+    max-width:initial;
+    padding: 0 45px;
+}
+.prolistmiddleCon{
+    max-width:initial;
+    padding: 80px 60px 40px 60px;
+}
+.contactformSection{
+    max-width:initial;
+	padding: 80px 45px;
+}
+.conheadings {
+    font-size: 26px;
+}
+.logoonban{
+    left: 60px;
+}
+}
+@media only screen and (max-width: 1320px) {
+.navbar-default .container{
+	text-align: left;
+}
+.navbar-default #navbar ul{
+	padding-right: 0;
+}
+.pgaddressrow h1.heading{
+	font-size: 30px;
+}
+.loginformCon h2 {
+    font-size: 40px;
+}
+.pgaddressrow {
+    padding: 24px 0 18px 0;
+}
+.contactformSection h2{
+    font-size: 32px;
+}
+.editprofileinputsConbx .pronmtitle{
+    font-size: 15px;
+}
+.editprofileinputsConbx .pronm{
+    font-size: 18px;
+}
+.geekprodetailsCon {
+    padding-bottom: 40px;
+}
+.cartnotifCon .ordersviewrowdetails .ordersinfos .oddersnm {
+    font-size: 16px;
+}
+.cartnotifCon .ordersviewrowdetails .ordersinfos .vers {
+    font-size: 14px;
+}
+.cartnotifCon h3 {
+    font-size: 22px;
+}
+}
+@media only screen and (max-width: 1220px) {
+.navbar-default .container{
+	padding: 0 10px;
+}
+.searchboxh {
+    right: 20px;
+}
+.headerrtsnav {
+    right: 100px;
+}
+.homepgmiddleCon {
+	padding: 40px 20px;
+	padding-bottom: 0;
+}
+.contactformSection,.contactformSection.checkout {
+    padding: 60px 20px;
+}
+.prolistmiddleCon {
+    padding: 80px 30px 40px 30px;
+}
+.logoonban{
+    padding: 20px 40px;
+    left: 30px;
+    top: -45px;
+}
+.tabsfeature,#brandslogo{
+    padding: 0 10px;
+}
+.shopbyintrest,.collectionsliderwarp{
+    padding: 0 10px;
+}
+.yourorderdetailsboxes {
+    padding: 20px;
+}
+.geekprheading,.geekprpriceheading{
+    font-size: 22px;
+}
+#vc_row_1579195378932-07a11792-9294 {
+    padding: 60px 20px;
+}
+}
+@media only screen and (max-width: 1170px) {
+.footerwrap {
+	padding: 30px 0;
+}
+.footerwrap .container {
+    width: auto;
+}
+.navbar-default .headerrtsnav li {
+    margin: 0 10px;
+}
+.shopbyvendorview{
+	height: 240px;
+}
+.savedAddressrow {
+    padding: 30px;
+}
+.wishlistingwrap {
+    padding: 40px 20px;
+}
+.contactformSection .container,.wishlistingwrap .container{
+    padding: 0;
+    width: auto;
+}
+.greekshublogo{
+    width: 300px;
+    height: 300px;
+    margin-right: 60px;
+}
+.table.wishlistview > thead > tr > th{
+    font-size: 16px;
+}
+.tablepronm .prodnm{
+    font-size: 16px;
+    line-height: 24px;
+}
+.tableimgview{
+    width: 110px;
+    height: 100px;
+}
+.tablepronm {
+    margin-left: 200px;
+    line-height: 100px;
+}
+.instockbtn,.tblpricerw .addtocart{
+    padding: 10px 24px;
+    font-size: 16px;
+}
+.tblpricerw .pricespro{
+    font-size: 20px;
+}
+h3.orderheading{
+    margin-top: 0;
+}
+.ordersviewbox {
+    padding-top: 20px;
+}
+.ordersviewrowidnum{
+    font-size: 17px;
+}
+.ordersviewrowdetails .ordersinfos .oddersnm{
+    font-size: 20px;
+}
+.yourprolistrw .tableimgview {
+    width: 60px;
+    height: 50px;
+}
+.yourprolistrw .tablepronm {
+    margin-left: 80px;
+    line-height: 50px;
+}
+.add_differ {
+    margin-top: 60px;
+}
+.productwtview .proinfo .newbtnvew{
+    padding: 3px 12px;
+}
+.order_products_details{
+    font-size: 20px;
+}
+}
+
+@media only screen and (max-width: 1023px) {
+.loginformCon.signup,.loginformCon{
+	padding: 0 20px;
+}
+.navbar-header {
+    float: none;
+}
+.headerrtsnav {
+    right: 160px;
+}
+.searchboxh {
+    right: 75px;
+}
+.navbar-toggle{
+	margin-top: 25px;
+}
+.navbar-default .navbar-toggle {
+    border-color:transparent;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color:transparent;
+}
+.navbar-toggle .icon-bar {
+    width: 28px;
+    height: 3px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 5px;
+}
+#navbar {
+    margin-top: 0px;
+}
+.collectionsliderwarp .collectionbx {
+    padding: 30px;
+    margin: 10px !important;
+}
+.collectionConbx .cellecheading {
+    font-size: 28px;
+    line-height: 32px;
+}
+.collectionConbx .cellecheadingsm {
+    font-size: 18px;
+}
+.downLinkContainer a {
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+.wakipromises .promisesbx .imgsbx span.original {
+    width: 50px;
+    height: 40px;
+    background-size: 87px 40px;
+}
+.wakipromises .promisesbx .promisecon {
+    font-size: 12px;
+    margin-left: 60px;
+}
+.greekscontactinfo {
+    margin-left: 20px;
+}
+.conheadings {
+    font-size: 24px;
+}
+.greekscontactinfo .grksconrow .strhead{
+	font-size: 18px;
+}
+.greekscontactinfo .grksconrow .addtxt{
+	font-size: 16px;
+}
+.contactformSection h2 {
+    font-size: 28px;
+}
+.greekshublogo {
+    width: 240px;
+    height: 240px;
+    margin-right: 40px;
+}
+.greekshublogo .logoview{
+    width: 160px;
+    height: 161px;
+    margin-left: -80px;
+    margin-top: -80px;
+}
+.table.wishlistview > tbody > tr > td{
+    padding: 20px 10px;
+}
+.tableimgview {
+    width: 80px;
+    height: 70px;
+    margin-left: 50px;
+}
+.tableprorow .fa{
+    left: 10px;
+}
+.tablepronm {
+    margin-left: 150px;
+    line-height: 70px;
+}
+.instockbtn, .tblpricerw .addtocart {
+    padding: 10px 20px;
+}
+.tblpricerw .pricespro {
+    font-size: 18px;
+}
+.minwd5h{
+	min-width: 400px;
+}
+.minwd3h{
+	min-width: 260px;
+}
+.ordersviewrowdetails {
+    padding: 20px;
+}
+.productwtview .imgview{
+    height: 260px;
+}
+.collectionsliderwarp{
+    margin-bottom: 60px !important;
+}
+.yourorderdetailsboxes {
+    padding: 15px;
+}
+.yourprolistrw .tablepronm .prodnm {
+    font-size: 14px;
+    line-height: 20px;
+}
+.yourprolistrw .tblpricerw .pricespro {
+    font-size: 16px;
+}
+.choosecardpaydetails .chooseone [type="radio"]:checked + label, .choosecardpaydetails .chooseone [type="radio"]:not(:checked) + label {
+    font-size: 18px;
+}
+.termschoosetxt{
+    padding-top: 5px;
+}
+.add_differ {
+    margin-top: 30px;
+}
+.geekprdet {
+    margin-left: 380px;
+}
+.banproCon{
+    left: 20px;
+    right: 20px;
+}
+.profilebannerbox .container {
+    width: auto;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.navbar-default .container {
+	padding: 0 5px !important;
+}
+.pgaddressrow h1.heading {
+	font-size: 24px;
+}
+.contactformSection h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.pgaddressrow h4.smheading {
+    font-size: 14px;
+}
+.loginformCon h4 {
+    font-size: 16px;
+}
+.loginformCon h2 {
+    font-size: 32px;
+}
+.navbar-nav{
+	margin: 0;
+}
+.navbar-brand{
+	width: 50px;
+	height: 51px;
+}
+.loginwrap,.contactpgwrap {
+    margin-top: 70px;
+}
+.container > .navbar-header{
+	margin: 0;
+}
+.navbar-toggle {
+	margin-right: 0;
+    margin-top: 18px;
+}
+.headerrtsnav{
+	top:11px;
+	right: 140px;
+}
+.searchboxh{
+	top:6px;
+	right: 56px;
+}
+.navbar-default .headerrtsnav li{
+	display: inline-block;
+}
+.navbar-default .headerrtsnav li {
+    margin: 0px;
+}
+.searchboxh input[type="text"]:focus {
+    width: 300px;
+}
+.loginforminputs .form-control{
+	padding: 12px;
+}
+.homeban {
+    margin-top: 70px;
+}
+.productwtview .imgview,.shopviewimgbx{
+	height: 210px;
+}
+.homepgmiddleCon {
+    padding: 30px 15px;
+    padding-bottom: 0;
+}
+.tabsfeature .nav-tabs > li > a {
+	padding: 10px;
+    font-size: 18px;
+}
+.productwtview .proinfo .pronm{
+	font-size: 14px;
+}
+.productwtview .proinfo .proprice{
+	font-size: 16px;
+}
+.productwtview .proinfo{
+	padding: 10px;
+}
+.tabsfeature .nav-tabs > li:nth-child(2) > a {
+    margin: 0;
+}
+.owl-carousel.brandslogo .owl-item img {
+    width:50px;
+}
+.productslistbox {
+    margin-top: 15px;
+}
+.productwtview {
+    margin-bottom: 20px !important;
+}
+.titleview{
+	font-size: 21px;
+	width: auto;
+}
+.shopintrestheading{
+	padding: 10px 5px;
+	font-size: 16px;
+}
+.shopviewint {
+    padding: 30px 0;
+}
+.collectionConbx .typecollection .typetext{
+	font-size: 14px;
+}
+.collectionsliderwarp .collectionbx {
+    padding: 15px;
+    margin: 10px 5px !important;
+}
+.titleviewrow.category {
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+.collectionConbx .cellecheading{
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.collectionConbx .cellecheading br,.collectionConbx .cellecheadingsm br{
+	display: none;
+}
+.collectionsliderwarp .collectionbx .collectionConbx {
+    padding-top: 10px;
+}
+.collectionConbx .cellecheadingsm {
+    font-size: 14px;
+}
+.shopnowrow a {
+    padding: 10px 16px;
+    font-size: 13px;
+}
+.shopnowrow {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.owl-carousel.colectionSlider .owl-dots{
+	right:20px;
+}
+.collectionsliderwarp {
+    margin-bottom: 60px;
+}
+.shopbyvendorview {
+    height: 170px;
+}
+.shopbyvendorview img{
+	max-width: 90%;
+	max-width: 90%;
+}
+.productwtview .imgview span.offper{
+	right:10px;
+	top:10px;
+	font-size: 11px;
+}
+.navbar-default #navbar ul li{
+	display: block;
+}
+.navbar-default .navbar-nav > li > a{
+	margin: 0;
+	display: inline-block;
+}
+.container > .navbar-collapse{
+	margin: 0;
+}
+.contactformSection,.contactformSection.checkout{
+    padding: 25px 15px;
+}
+.contactformSection .form-group {
+    margin-bottom: 20px;
+}
+.greekscontactinfo {
+	margin-top: 50px;
+    margin-left: 0px;
+}
+.greekscontactinfo .grksconrow{
+	margin-bottom: 50px;
+}
+.savedAddressrow .loginbtnrow {
+    text-align: left;
+}
+.savedAddressrow {
+    padding: 20px;
+}
+.loginbtnrow .loginbtn.sv_add{
+    padding: 10px 40px;
+}
+.loginbtnrow .loginbtn{
+    padding:10px 28px
+}
+.loginforminputs label,.loginforminputs .form-control{
+    font-size: 14px;
+}
+.editprofile_upload{
+    float: none;
+    margin: auto;
+}
+.editprofileinputsConbx {
+    margin-left: 0;
+    padding-top: 40px;
+}
+.editprofileinputsConbx .pronm {
+    margin-bottom: 20px;
+}
+.profilenmrw{
+    margin-bottom: 10px;
+}
+.greekshublogo{
+    display: none;
+}
+.aboutsmtxt{
+    font-size: 15px;
+}
+.productslistwrap{
+	margin-top: 70px;
+}
+.logoonban {
+    padding: 10px;
+    left: 20px;
+    top: -28px;
+}
+.logoonban img {
+    width: 60px;
+}
+.owl-carousel.prolistban .owl-dots{
+    bottom: 10px;
+}
+.prolistmiddleCon {
+    padding: 40px 20px 30px 20px;
+}
+.filterwrap .shoplinksbx {
+    padding-top: 10px;
+}
+.filterwrap .shoplinksbx ul li{
+    float: left;
+}
+.filterwrap .shoplinksbx ul li a{
+    padding: 10px 0;
+    font-size: 15px;
+}
+.viewAds{
+    display: none;
+}
+.filterwrap .shoplinksbx ul li span{
+    display: inline-block;
+}
+.rangesliderfilter {
+    padding-top: 20px;
+}
+.productslistingviews {
+    margin-top: 30px;
+}
+.popularheadingrow {
+    margin-bottom: 20px;
+}
+.popularheading{
+    font-size: 21px;
+    padding-bottom: 20px;
+}
+.prolistpaginationrow ul li a{
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    margin: 0 5px;
+}
+.filterwrap .filterheading{
+    font-size: 15px;
+}
+.table-responsive{
+    border: 0;
+}
+.table-responsive > .table > tbody > tr > td{
+    white-space:initial;
+}
+.wishlistingwrap {
+    padding: 25px 15px;
+}
+.ordersviewrowdetails {
+    padding: 15px;
+}
+.ordersviewrowdetails .orderimgview,.ordersviewrowdetails.orderdetails .orderimgview{
+    width: 80px;
+    height: 70px;
+}
+.ordersviewrowdetails .ordersinfos,.ordersviewrowdetails.orderdetails .ordersinfos {
+    margin-left: 100px;
+}
+.order_products_details{
+    margin-top: 0px;
+    font-size: 16px;
+    padding-top: 5px;
+}
+.loginbtnrow.ordet .loginbtn,.cancel_order_btn {
+    width: 100%;
+    padding: 13px 0;
+}
+.visacard{
+    margin-top: 15px;
+    text-align: left;
+}
+.ordersviewrowdetails .ordersinfos .oddersnm {
+    font-size: 17px;
+}
+.ordersviewrowidnum {
+    font-size: 15px;
+}
+.ordersviewrowdetails .ordersinfos .orderpriz{
+    font-size: 18px;
+}
+h3.orderheading{
+    padding-bottom: 15px;
+}
+.ordrdetlink a{
+    font-size: 13px;
+}
+.padzero{
+    width: 50% !important;
+}
+.brandsbx{
+    line-height: normal;
+}
+.tabsfeature,#brandslogo{
+    padding: 0 5px;
+}
+.shopbyintrest,.collectionsliderwarp{
+    padding: 0 5px;
+}
+.footerwrap .col-xs-6{
+    width: 50% !important;
+}
+.collectionsliderwarp{
+    margin-bottom: 40px !important;
+}
+.owl-carousel.colectionSlider .owl-item img{
+    width: 80%;
+}
+.fullwidthbanner-container{
+	margin-top: 70px !important;
+}
+.checkoutwrap .logtxtrow{
+    padding: 16px;
+}
+.add_differ {
+    margin-bottom: 20px;
+}
+.product-image {
+    width: 300px;
+    float: none;
+    margin: auto;
+}
+.geekprdet {
+    margin-left: 0px;
+    padding-top: 40px;
+}
+.exzoom .exzoom_nav .exzoom_nav_inner span {
+    width: 60px !important;
+    height: 60px !important;
+}
+.exzoom .exzoom_btn a{
+    top: -80px !important;
+}
+.proImgWrap .exzoom .exzoom_btn a.exzoom_prev_btn{
+    left: 0;
+}
+.proImgWrap .exzoom .exzoom_btn a.exzoom_next_btn{
+    right:0;
+}
+.geekprodetailsCon {
+    padding-bottom: 10px;
+}
+.cartnotification .shoppingcartdetailsbx{
+    width: 360px;
+}
+.cartoverlay{
+    right:360px;
+}
+.cartnotifCon {
+    padding: 20px;
+}
+.cartnotifCon .ordersviewrowdetails .orderimgview {
+    width: 70px;
+    height: 60px;
+}
+.cartnotifCon .ordersviewrowdetails .ordersinfos{
+    margin-left: 84px;
+}
+.cartnotification .shoppingcartdetailsbx .closewin{
+    right:20px;
+}
+#vc_row_1579195378932-07a11792-9294 {
+    padding: 25px 0px;
+}
+.banprofile{
+    padding: 120px 0;
+}
+.banproCon h1{
+    font-size: 24px;
+    text-align: center;
+}
+.banproCon h2{
+    font-size: 21px;
+    text-align: center;
+    margin-top: 0;
+}
+.banproCon .text-right{
+    text-align: center;
+}
+.profileimgbannerimg {
+    width: 80px;
+    height: 80px;
+}
+.profilenewpgwrap .profilenav ul li{
+    padding: 16px;
+    font-size: 18px;
+}
+.profilenewpgwrap .profilenav ul li a{
+    padding-left: 54px;
+}
+.productwtview .newbtnvew{
+    right: 8px;
+    bottom: 5px;
+    padding: 4px 8px;
+}
+.prolistmiddleCon.searchpg {
+    padding-top: 5px;
+}
+.prolistmiddleCon.searchpg .productslistingviews {
+    margin-top: 15px;
+}
+.yourorderdetails.mnp{
+    margin: 25px 0;
+}
+.yourorderdetails.cartview .yourprolistrw .tblpricerw{
+    text-align: left;
+    padding-top: 12px;
+}
+.removelistrw {
+    top: 25px;
+    bottom: auto;
+}
+.yourorderdetails.cartview .yourprolistrw .tablepronm{
+    padding-right: 30px;
+}
+.savedAddressrow.cartview,.changeaddboxCon, .changebillCon {
+    padding: 20px;
+}
+.notificationsection{
+	min-height:initial;
+}
+}
+@media only screen and (max-width: 400px) {
+.navbar-default .headerrtsnav li a{
+	font-size: 12px;
+	padding: 28px 6px 10px 6px;
+}
+.searchboxh span.txt{
+	font-size: 12px;
+	bottom: -2px;
+}
+.searchboxh {
+    right: 45px;
+}
+.headerrtsnav {
+    right: 130px;
+}
+.tabsfeature .nav-tabs > li > a {
+    padding: 8px;
+    font-size: 16px;
+}
+.searchboxh input[type="text"]:focus {
+    width: 260px;
+}
+.ordersviewrowdetails .orderimgview {
+    width: 60px;
+    height: 50px;
+}
+.ordersviewrowdetails .ordersinfos {
+    margin-left: 80px;
+}
+.cartnotification .shoppingcartdetailsbx{
+    width: 320px;
+}
+.cartoverlay{
+    right:320px;
+}
+.applycouponrw .couponbtn{
+    padding: 8px 12px;
+    font-size: 15px;
+}
+.searchinputrow .form-control{
+    font-size: 14px; 
+    padding-left: 40px;
+    background-size: 16px 17px;
+    background-position: 15px 15px;
+}
+.searchkeywordrow ul li a{
+	padding: 6px 28px;
+	font-size: 14px;
+}
+}
+
+@media only screen and (max-width: 359px) {
+.tabsfeature .nav-tabs > li > a {
+	padding: 4px;
+	font-size: 14px;
+}
+.productwtview .imgview, .shopviewimgbx {
+    height: 180px;
+}
+.shopnowrow a {
+    padding: 10px;
+    font-size: 10px;
+}
+.shopnowrow .fa {
+    font-size: 13px;
+}
+.navbar-default .headerrtsnav li a {
+    padding: 28px 4px 10px 4px;
+}
+.ordersviewrowidnum {
+    font-size: 14px;
+}
+.addcartbtnrw .loginbtnrow .loginbtn{
+    padding: 0 24px;
+}
+.addcartbtnrw .loginbtnrow .loginbtn:hover {
+    letter-spacing: 0px;
+    padding-left: 24px;
+
+}
+.cartnotification .shoppingcartdetailsbx{
+    width: 290px;
+}
+.cartoverlay{
+    right:290px;
+}
+.applycouponrw .couponbtn{
+    padding: 9px 6px;
+    font-size: 13px;
+}
+.ordrdetlink a.orderdetails {
+    font-size: 12px;
+	padding:5px 8px;
+}
+}

@@ -2,6 +2,7 @@ import React from "react";
 import "../style/Login.css";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 const Forgot = () => {
   const initialValues = {
@@ -12,25 +13,39 @@ const Forgot = () => {
     email: Yup.string().email("Enter valid Email").required("Required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
+  const onSubmit = (event) => {
+    const email = event.target.email.value;
 
-    setTimeout(() => {
-      props.resetForm();
-      props.setSubmitting(false);
-    }, 2000);
+    axios
+      .post("http://3.109.247.241:6678/api/auth/register", email)
+      .then((response) => {
+        console.log(response);
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
+  //   const onSubmit = (values, props) => {
+  //     console.log(values);
+
+  //     setTimeout(() => {
+  //       props.resetForm();
+  //       props.setSubmitting(false);
+  //     }, 2000);
+  //   };
 
   return (
     <div>
-      <div className="loginwrap">
-        <div className="pgaddressrow">
-          <h1 className="heading">Login / Register</h1>
-          <h4 className="smheading">
-            <a href="/login " style={{textDecoration:"none"}}>Home</a> / Login / <a href="/forgot " style={{textDecoration:"none"}}>Forgot</a>
+      <div class="loginwrap">
+        <div class="pgaddressrow">
+          <h1 class="heading">Login / Register</h1>
+          <h4 class="smheading">
+            <a href="/home ">Home</a> / login / <a href="/forgot ">Forgot</a>
           </h4>
         </div>
-        <div className="loginformCon">
+        <div class="loginformCon">
           <h2>FORGOT</h2>
 
           <Formik
@@ -42,9 +57,11 @@ const Forgot = () => {
               <Form>
                 <div className="loginforminputs">
                   <div className="form-group">
-                    <label>Username or Email Address</label>
-                    <Field name="email" className="form-control" type="text" />
-                    <ErrorMessage name="email" />
+                    <label>Enter Your Email</label>
+                    <Field name="email" className="form-control" type="email" />
+                    <div className="error">
+                      <ErrorMessage name="email" />
+                    </div>
                   </div>
                   <div className="loginbtnrow">
                     <button className="loginbtn" type="submit">

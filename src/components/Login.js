@@ -3,6 +3,7 @@ import "../style/Login.css";
 import axios from "axios";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Nav from "./Navbar";
 
 export default function Login() {
   const initialValues = {
@@ -29,7 +30,7 @@ export default function Login() {
       password,
     };
     axios
-      .post("http://3.109.247.241:6778/api/v2/customer/signin", data)
+      .post("http://3.109.247.241:6678/api/auth/login", data)
       .then((response) => {
         console.log(response);
         event.target.reset();
@@ -71,10 +72,11 @@ export default function Login() {
 
   return (
     <div>
+      <Nav/>
       <div className="pgaddressrow">
         <h1 className="heading">Login / Register</h1>
         <h4 className="smheading">
-          <a href="/" style={{textDecoration:"none"}}>Home</a> / Login / <a href="/signup " style={{textDecoration:"none"}}>Register</a>
+          <a href="/home" style={{textDecoration:"none"}}>Home</a> / Login / <a href="/signup " style={{textDecoration:"none"}}>Register</a>
         </h4>
       </div>
 
@@ -93,7 +95,7 @@ export default function Login() {
                 <div className="form-group">
                   <label>Username or email address</label>
 
-                  <Field name="email" className="form-control" type="text" />
+                  <Field name="text" className="form-control" type="text" />
                   {/* <ErrorMessage name="email" /> */}
                   <div className="error">
                     <ErrorMessage name="email" />

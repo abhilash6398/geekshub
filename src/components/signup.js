@@ -13,7 +13,7 @@ export default function Signup() {
     shopurl: "",
     // phoneno: "",
     shopname: "",
-    username:""
+    username: "",
   };
 
   const validationSchema = Yup.object().shape({
@@ -65,7 +65,7 @@ export default function Signup() {
     const data = {
       firstName,
       lastName,
-    //   phoneno,
+      //   phoneno,
       email,
       password,
       user,
@@ -95,7 +95,13 @@ export default function Signup() {
       <div class="pgaddressrow">
         <h1 class="heading">Login / Register</h1>
         <h4 class="smheading">
-          <a href="/" style={{textDecoration:"none"}}>Home</a> / Login / <a href="/signup " style={{textDecoration:"none"}}>Register</a>
+          <a href="/" style={{ textDecoration: "none" }}>
+            Home
+          </a>{" "}
+          / Login /{" "}
+          <a href="/signup " style={{ textDecoration: "none" }}>
+            Register
+          </a>
         </h4>
       </div>
       <div class="loginformCon signup">
@@ -108,7 +114,7 @@ export default function Signup() {
           onSubmit={submitHandler}
         >
           {(props) => (
-            <Form >
+            <Form>
               <div class="loginforminputs">
                 <div class="imvendwrap">
                   <div class="row clearfix">

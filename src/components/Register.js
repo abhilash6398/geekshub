@@ -13,14 +13,13 @@ const Register = () => {
     shopurl: "",
     phoneno: "",
     shopname: "",
-    username:""
+    username: "",
   };
 
   const validationSchema = Yup.object().shape({
     firstName: Yup.string()
-
-      .required("Required")
-      .min(3, "Too short Name"),
+    .required("*Required")
+    .min(3, "Too short Name"),
     username: Yup.string()
 
       .required("*Required")
@@ -30,7 +29,7 @@ const Register = () => {
     // last: Yup.string().last("Enter valid LastName").require("Required")
     // .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,"Number & special character is restricted"),
 
-    email: Yup.string().email("Enter valid Email").required("Required"),
+    email: Yup.string().email("Enter valid Email").required("*Required"),
 
     password: Yup.string()
       .min(8, "Password minimum length should be 8")
@@ -38,10 +37,10 @@ const Register = () => {
       .matches(/(?=.*[0-9])/, "Password must contain a number."),
 
     shopurl: Yup.string()
-      .required("*Website should be a valid URL")
-      .matches(
-        /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/
-      ),
+      .required("*Website should be a valid URL"),
+      // // .matches(
+      // //   /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/
+      // ),
 
     phoneno: Yup.number()
       .typeError("Enter valid Phone Number")
@@ -101,7 +100,13 @@ const Register = () => {
       <div class="pgaddressrow">
         <h1 class="heading">Login / Register</h1>
         <h4 class="smheading">
-          <a href="/" style={{textDecoration:"none"}}>Home</a> / Login / <a href="/signup " style={{textDecoration:"none"}}>Register</a>
+          <a href="/home" style={{ textDecoration: "none" }}>
+            Home
+          </a>{" "}
+          / Login /{" "}
+          <a href="/signup " style={{ textDecoration: "none" }}>
+            Register
+          </a>
         </h4>
       </div>
       <div class="loginformCon signup">
@@ -121,7 +126,7 @@ const Register = () => {
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>First Name</label>
-                        <Field
+                        <input
                           name="firstName"
                           class="form-control"
                           type="text"
@@ -136,7 +141,7 @@ const Register = () => {
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Last Name</label>
-                        <Field
+                        <input
                           name="lastName"
                           class="form-control"
                           type="text"
@@ -155,7 +160,7 @@ const Register = () => {
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Email</label>
-                        <Field
+                        <input
                           name="email"
                           class="form-control"
                           type="email"
