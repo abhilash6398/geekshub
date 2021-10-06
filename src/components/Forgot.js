@@ -10,14 +10,14 @@ const Forgot = () => {
   };
 
   const validationSchema = Yup.object().shape({
-    email: Yup.string().email("Enter valid Email").required("Required"),
+    email: Yup.string().required("*Required"),
   });
 
   const onSubmit = (event) => {
     const email = event.target.email.value;
 
     axios
-      .post("http://3.109.247.241:6678/api/auth/register", email)
+      .post("http://3.109.247.241:6778/api/v2/customer/forgotPassword", email)
       .then((response) => {
         console.log(response);
         event.target.reset();

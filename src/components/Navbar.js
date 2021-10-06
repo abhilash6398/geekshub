@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Navbar.css";
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar, Container, Dropdown } from "react-bootstrap";
 import logo from "../assets/images/logo.png";
 import { BrowserRouter, Link } from "react-router-dom";
 const Nav = () => {
@@ -75,7 +75,7 @@ const Nav = () => {
         </div>
         <div className="icon__name">
           <ul>
-            <li><a href="/profile">Account</a></li>
+            <li>Account</li>
             <li>Wishlist</li>
             <li>Cart</li>
             <li>Search</li>

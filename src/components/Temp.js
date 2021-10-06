@@ -32,7 +32,7 @@ export default function Login({ setToken }) {
   };
 
   return (
-    // <div className="login-wrapper">
+    // <div classNameName="login-wrapper">
     // <h1>Please Log In</h1>
     // <form onSubmit={handleSubmit}>
     //   <label>
@@ -51,8 +51,8 @@ export default function Login({ setToken }) {
 
     <>
       <Nav />
-      <div class="pgaddressrow">
-        <h1 class="heading">Login / Register</h1>
+      <div className="pgaddressrow">
+        <h1 className="heading">Login / Register</h1>
         <h4 className="smheading">
           <a style={{ textDecoration: "none" }} href="/home ">
             Home
@@ -63,29 +63,29 @@ export default function Login({ setToken }) {
           </a>
         </h4>
       </div>
-      <div class="loginformCon">
+      <div className="loginformCon">
         <h4>Welome Back</h4>
         <h2>LOGIN</h2>
         <form onSubmit={handleSubmit}>
-          <div class="loginforminputs">
-            <div class="form-group">
+          <div className="loginforminputs">
+            <div className="form-group">
               <label>Username or email address</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 onChange={(e) => setUserName(e.target.value)}
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label>Password</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <div class="loginbtnrow">
-              <button class="loginbtn" type="submit">
+            <div className="loginbtnrow">
+              <button className="loginbtn" type="submit">
                 LOG IN
               </button>
               <input
@@ -95,8 +95,11 @@ export default function Login({ setToken }) {
               />{" "}
               Remember me
             </div>
-            <div class="lostyourpasswordrw">
+            <div className="lostyourpasswordrw">
               <a href="/forgot">Lost your password?</a>
+            </div>
+            <div className="lostyourpasswordrw text-right">
+              <a href="/signup">Create your Account</a>
             </div>
           </div>
         </form>

@@ -9,6 +9,7 @@ import Register from "./Register";
 import useToken from "./useToken";
 import FooterComponent from "./Footer";
 import Signup from "./signup";
+import Reset from "./Reset";
 // import axios from 'axios';
 
 function App() {
@@ -25,11 +26,11 @@ function App() {
 
   return (
     <>
-      <Nav />
+      <Nav/>
       <div className="container">
       <h4 class="smheading">
         {/* <a href="/home"> Home </a> / <a href="/profile">My Profile</a> /{" "} */}
-        <a href="/vendor" > Vendor Reg.</a> / <a href="/login" onClick={logOut}>LogOut</a>
+        <a href="/vendor" > Vendor Reg</a> / <a href="/login" onClick={logOut}>LogOut</a>
         {/* / <a href="/vendor">Logout</a> */}
       </h4>
       </div>
@@ -49,6 +50,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <Signup />
+          </Route>
+          <Route path="/reset">
+            <Reset />
           </Route>
 
           {/* <Route path="/logout"><Logout /></Route> */}
