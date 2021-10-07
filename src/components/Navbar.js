@@ -23,7 +23,7 @@ const Nav = () => {
         <div className="Nav__links">
           <ul>
             <li>
-              <Link to="/home">Home</Link>
+              <a href="/home"> Home</a>
             </li>
             <li>About us</li>
             <li>Latest Products</li>
@@ -75,7 +75,7 @@ const Nav = () => {
         </div>
         <div className="icon__name">
           <ul>
-            <li>Account</li>
+            <li><a href="/profile" >Account</a></li>
             <li>Wishlist</li>
             <li>Cart</li>
             <li>Search</li>

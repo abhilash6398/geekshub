@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-
 import PropTypes from "prop-types";
 import Nav from "./Navbar";
+import { BrowserRouter, Redirect, Router } from "react-router-dom";
 
 import "../style/Login.css";
 import FooterComponent from "./Footer";
@@ -103,7 +103,13 @@ export default function Login({ setToken }) {
             </div>
           </div>
         </form>
+        {/* <BrowserRouter>
+          <Router>
+            <Redirect to="/home" />
+          </Router>
+        </BrowserRouter> */}
       </div>
+
       <FooterComponent />
     </>
   );
