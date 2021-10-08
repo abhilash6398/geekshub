@@ -16,6 +16,7 @@ import Category from "./Home/category";
 import TopPicks from "./Home/topPicks";
 import Brands from "./Home/brands";
 import Vendor from "./Home/vendor";
+import ProdDetails from "./Prod_Details";
 // import axios from 'axios';
 
 function App() {
@@ -86,6 +87,9 @@ function App() {
           </Route>
           <Route path="/vendorpage">
             <Vendor />
+          </Route>
+          <Route path="/prodDetails">
+            <ProdDetails />
           </Route>
           {/* <Route path="/logout"><Logout /></Route> */}
         </Switch>
