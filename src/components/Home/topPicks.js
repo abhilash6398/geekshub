@@ -34,7 +34,7 @@ export default class TopPicks extends Component {
                       <div class="imgview">
                         <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/GXOqcBxBU-latestpro1.png"} alt="" style={{padding:"20px"}} />
                         <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/nMbG2G2M9-latestpro2.png"} alt="" style={{padding:"20px"}}  />
-                        {/* <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/nMbG2G2M9-latestpro2.png"} alt="" /> */}
+                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/FJiz321B8-pro4.jpg"} alt="" />
                         <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/NxJdpeWKo-latestpro4.png"} alt="" style={{padding:"20px"}}  />
                       </div>
                       <div class="proinfo">
