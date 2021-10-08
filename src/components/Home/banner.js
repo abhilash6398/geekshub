@@ -21,7 +21,7 @@ export default class Banner extends Component {
             <div class="shopbyintrest">
               <div class="titleviewrow">
                 <div class="titleview">
-                  {/* <span>posterPage</span> */}
+                  <span>posterPage</span>
                 </div>
               </div>
               <div class="shopviewint">

@@ -20,9 +20,9 @@ export default class TopPicks extends Component {
           <div className="container">
             <div class="shopbyintrest">
               <div class="titleviewrow">
-                {/* <div class="titleview">
+                <div class="titleview">
                   <span>TopPicks Page</span>
-                </div> */}
+                </div>
               </div>
               <div class="shopviewint">
                 <div
