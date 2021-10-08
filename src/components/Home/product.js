@@ -1,28 +1,28 @@
 import React, { Component } from "react";
 import axios from "./Axios";
-import "../style/brands.css";
+// import "../style/product.css";
 // import "../assets/css/style.css";
 
-export default class Brands extends Component {
+export default class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Brands: [],
+      Product: [],
     };
   }
-  getbrandsData() {
+  getProductsData() {
     axios
-      .get(`brandsPage`, {})
+      .get(`productPage`, {})
       .then((res) => {
         const data = res.data;
         console.log(data);
-        const brands = data.data.map((u) => (
+        const products = data.data.map((u) => (
           <div className="container">
             <div class="shopbyintrest">
               <div class="titleviewrow">
-                <div class="titleview">
-                  <span>brandsPage</span>
-                </div>
+                {/* <div class="titleview">
+                  <span>Popular</span>
+                </div> */}
               </div>
               <div class="shopviewint">
                 <div
@@ -32,10 +32,14 @@ export default class Brands extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={u.image.img} alt="" />
+                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt="" style={{padding:"30px"}} />
+                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt="" style={{padding:"30px"}} />
+                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt="" style={{padding:"30px"}} />
                       </div>
                       <div class="proinfo">
                         <div class="pronm">{u.name}</div>
+                        <div class="proprice">{u.price}</div>
+                        <span class="newbtnvew">New</span>
                       </div>
                     </div>
                   </div>
@@ -46,7 +50,7 @@ export default class Brands extends Component {
         ));
 
         this.setState({
-          brands,
+          products,
         });
       })
       .catch((error) => {
@@ -55,9 +59,9 @@ export default class Brands extends Component {
   }
 
   componentDidMount() {
-    this.getbrandsData();
+    this.getProductsData();
   }
   render() {
-    return <>{this.state.brands}</>;
+    return <>{this.state.products}</>;
   }
 }

@@ -10,12 +10,12 @@ import useToken from "./useToken";
 import FooterComponent from "./Footer";
 import Signup from "./signup";
 import Reset from "./Reset";
-import Product from "./product";
-import Banner from "./banner";
-import Category from "./category";
-import TopPicks from "./topPicks";
-import Brands from "./brands";
-import Vendor from "./vendor";
+import Product from "./Home/product";
+import Banner from "./Home/banner";
+import Category from "./Home/category";
+import TopPicks from "./Home/topPicks";
+import Brands from "./Home/brands";
+import Vendor from "./Home/vendor";
 // import axios from 'axios';
 
 function App() {

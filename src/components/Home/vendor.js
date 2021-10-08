@@ -1,27 +1,27 @@
 import React, { Component } from "react";
 import axios from "./Axios";
-import "../style/topPicks.css";
+// import "../style/vendor.css";
 // import "../assets/css/style.css";
 
-export default class TopPicks extends Component {
+export default class Vendor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      TopPicks: [],
+      Vendor: [],
     };
   }
-  getTopPicksData() {
+  getvendorsData() {
     axios
-      .get(`topPicksPage`, {})
+      .get(`vendorPage`, {})
       .then((res) => {
         const data = res.data;
         console.log(data);
-        const topPicks = data.data.map((u) => (
+        const vendors = data.data.map((u) => (
           <div className="container">
             <div class="shopbyintrest">
               <div class="titleviewrow">
                 <div class="titleview">
-                  <span>TopPicks Page</span>
+                  <span>vendorPage</span>
                 </div>
               </div>
               <div class="shopviewint">
@@ -32,20 +32,10 @@ export default class TopPicks extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={u.productDetail.image.img} alt="" />
+                        <img src={u.image.img} alt="" />
                       </div>
                       <div class="proinfo">
-                        <div class="pronm">{u.count}</div>
-                        <div class="pronm">{u.productDetail.brand}</div>
-                        <div class="pronm">{u.productDetail.slug}</div>
-                        <div class="pronm">{u.productDetail.name}</div>
-                        <div class="pronm">{u.productDetail.price}</div>
-                        <div class="pronm">{u.productDetail.category}</div>
-                        <div class="pronm">{u.productDetail.description.materials}</div>
-                        <div class="pronm">{u.productDetail.description.colors}</div>
-
-
-                        <span class="newbtnvew">New</span>
+                        <div class="pronm">{u.name}</div>
                       </div>
                     </div>
                   </div>
@@ -56,7 +46,7 @@ export default class TopPicks extends Component {
         ));
 
         this.setState({
-          topPicks,
+          vendors,
         });
       })
       .catch((error) => {
@@ -65,9 +55,9 @@ export default class TopPicks extends Component {
   }
 
   componentDidMount() {
-    this.getTopPicksData();
+    this.getvendorsData();
   }
   render() {
-    return <>{this.state.topPicks}</>;
+    return <>{this.state.vendors}</>;
   }
 }

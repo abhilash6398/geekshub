@@ -1,28 +1,28 @@
 import React, { Component } from "react";
 import axios from "./Axios";
-import "../style/category.css";
+// import "../style/brands.css";
 // import "../assets/css/style.css";
 
-export default class Category extends Component {
+export default class Brands extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: [],
+      Brands: [],
     };
   }
-  getcategoryData() {
+  getbrandsData() {
     axios
-      .get(`categoryPage`, {})
+      .get(`brandsPage`, {})
       .then((res) => {
         const data = res.data;
         console.log(data);
-        const category = data.data.map((u) => (
+        const brands = data.data.map((u) => (
           <div className="container">
             <div class="shopbyintrest">
               <div class="titleviewrow">
-                <div class="titleview">
-                  <span>categoryPage</span>
-                </div>
+                {/* <div class="titleview">
+                  <span>brandsPage</span>
+                </div> */}
               </div>
               <div class="shopviewint">
                 <div
@@ -46,7 +46,7 @@ export default class Category extends Component {
         ));
 
         this.setState({
-          category,
+          brands,
         });
       })
       .catch((error) => {
@@ -55,9 +55,9 @@ export default class Category extends Component {
   }
 
   componentDidMount() {
-    this.getcategoryData();
+    this.getbrandsData();
   }
   render() {
-    return <>{this.state.category}</>;
+    return <>{this.state.brands}</>;
   }
 }

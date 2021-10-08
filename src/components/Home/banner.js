@@ -1,27 +1,27 @@
 import React, { Component } from "react";
 import axios from "./Axios";
-import "../style/vendor.css";
+// import "../style/banner.css";
 // import "../assets/css/style.css";
 
-export default class Vendor extends Component {
+export default class Banner extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Vendor: [],
+      Banner: [],
     };
   }
-  getvendorsData() {
+  getBannersData() {
     axios
-      .get(`vendorPage`, {})
+      .get(`posterPage`, {})
       .then((res) => {
         const data = res.data;
         console.log(data);
-        const vendors = data.data.map((u) => (
+        const banners = data.data.map((u) => (
           <div className="container">
             <div class="shopbyintrest">
               <div class="titleviewrow">
                 <div class="titleview">
-                  <span>vendorPage</span>
+                  {/* <span>posterPage</span> */}
                 </div>
               </div>
               <div class="shopviewint">
@@ -32,10 +32,7 @@ export default class Vendor extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={u.image.img} alt="" />
-                      </div>
-                      <div class="proinfo">
-                        <div class="pronm">{u.name}</div>
+                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/70dZbhZN4-banimg.jpg"} alt="" style={{height:"500px",width:"1000px"}}/>
                       </div>
                     </div>
                   </div>
@@ -46,7 +43,7 @@ export default class Vendor extends Component {
         ));
 
         this.setState({
-          vendors,
+          banners,
         });
       })
       .catch((error) => {
@@ -55,9 +52,9 @@ export default class Vendor extends Component {
   }
 
   componentDidMount() {
-    this.getvendorsData();
+    this.getBannersData();
   }
   render() {
-    return <>{this.state.vendors}</>;
+    return <>{this.state.banners}</>;
   }
 }

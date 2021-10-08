@@ -1,27 +1,27 @@
 import React, { Component } from "react";
 import axios from "./Axios";
-import "../style/product.css";
+// import "../style/category.css";
 // import "../assets/css/style.css";
 
-export default class Product extends Component {
+export default class Category extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Product: [],
+      category: [],
     };
   }
-  getProductsData() {
+  getcategoryData() {
     axios
-      .get(`productPage`, {})
+      .get(`categoryPage`, {})
       .then((res) => {
         const data = res.data;
         console.log(data);
-        const products = data.data.map((u) => (
+        const category = data.data.map((u) => (
           <div className="container">
             <div class="shopbyintrest">
               <div class="titleviewrow">
                 <div class="titleview">
-                  <span>Popular</span>
+                  <span>categoryPage</span>
                 </div>
               </div>
               <div class="shopviewint">
@@ -32,12 +32,10 @@ export default class Product extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={u.image.img} alt="" />
+                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt="" />
                       </div>
                       <div class="proinfo">
                         <div class="pronm">{u.name}</div>
-                        <div class="proprice">{u.price}</div>
-                        <span class="newbtnvew">New</span>
                       </div>
                     </div>
                   </div>
@@ -48,7 +46,7 @@ export default class Product extends Component {
         ));
 
         this.setState({
-          products,
+          category,
         });
       })
       .catch((error) => {
@@ -57,9 +55,9 @@ export default class Product extends Component {
   }
 
   componentDidMount() {
-    this.getProductsData();
+    this.getcategoryData();
   }
   render() {
-    return <>{this.state.products}</>;
+    return <>{this.state.category}</>;
   }
 }
