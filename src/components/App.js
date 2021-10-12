@@ -7,7 +7,6 @@ import Forgot from "./Forgot";
 import Profile from "./Profile";
 import Register from "./Register";
 import useToken from "./useToken";
-import FooterComponent from "./Footer";
 import Signup from "./signup";
 import Reset from "./Reset";
 import Product from "./Home/product";
@@ -17,6 +16,10 @@ import TopPicks from "./Home/topPicks";
 import Brands from "./Home/brands";
 import Vendor from "./Home/vendor";
 import ProdDetails from "./Prod_Details";
+import EditProfile from "./editProfile";
+import Users from "./AllProduct";
+import AddAddress from "./addAddress";
+import Address from "./address";
 // import axios from 'axios';
 
 function App() {
@@ -92,6 +95,18 @@ function App() {
             <ProdDetails />
           </Route>
           {/* <Route path="/logout"><Logout /></Route> */}
+          <Route path="/addaddress">
+            <AddAddress />
+          </Route>
+          <Route path="/editProfile">
+            <EditProfile />
+          </Route>
+          <Route path="/productdetails">
+            <Users />
+          </Route>
+          <Route path="/address">
+            <Address />
+          </Route>
         </Switch>
       </Router>
     </>

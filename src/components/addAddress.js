@@ -1,26 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../style/Login.css";
 import { Form, Field, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import useToken from "./useToken";
 
 export default function Signup() {
   const initialValues = {
     firstName: "",
     lastName: "",
-    email: "",
-    password: "",
-    shopurl: "",
+    pincode: "",
+    mobileno: "",
+    address: "",
     // phoneno: "",
-    shopname: "",
-    username: "",
+    city: "",
+    state: "",
+    landmark: "",
   };
 
   const validationSchema = Yup.object().shape({
-    firstName: Yup.string()
-
-      .required("*Required")
-      .min(3, "Too short Name"),
+    firstName: Yup.string().required("*Required").min(3, "Too short Name"),
     username: Yup.string()
 
       .required("*Required")
@@ -46,33 +45,47 @@ export default function Signup() {
       .typeError("Enter valid Phone Number")
       .required("*Required"),
 
+    pincode: Yup.number().required("*Required"),
+
     shopname: Yup.string()
 
       // .required("Required")
       .min(3, "Too short Name"),
     user: Yup.string().required("*Required"),
+    address: Yup.string().required("*Required"),
+    city: Yup.string().required("*Required"),
+    state: Yup.string().required("*Required"),
+    landmark: Yup.string().required("*Required"),
   });
 
   const submitHandler = (event) => {
     event.preventDefault();
     const firstName = event.target.firstName.value;
     const lastName = event.target.lastName.value;
-    // const phoneno = event.target.phoneno.value;
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const username = event.target.username.value;
-    const user = event.target.user.value;
+    const city = event.target.city.value;
+    const address = event.target.address.value;
+    const state = event.target.state.value;
+    const landmark = event.target.landmark.value;
+    const phoneno = event.target.phoneno.value;
+    // const email = event.target.email.value;
+    // const password = event.target.password.value;
+    // const username = event.target.username.value;
+    // const user = event.target.user.value;
     const data = {
       firstName,
       lastName,
-      //   phoneno,
-      email,
-      password,
-      user,
-      username,
+      phoneno,
+      //   email,
+      //   password,
+      //   user,
+      //   username,
+      city,
+      state,
+      address,
+      landmark,
     };
     axios
-      .post("http://3.109.247.241:6778/api/v2/customer/signup", data)
+      .post("http://3.109.247.241:6778/api/v2/customer/address/", data)
       .then((response) => {
         console.log(response);
         event.target.reset();
@@ -89,6 +102,30 @@ export default function Signup() {
   //       props.setSubmitting(false);
   //     }, 2000);
   //   };
+  // const userToken = useToken();
+  // const userData = userToken.userData.user;
+
+  // useEffect(() => {
+  //   const user = fetch('http://3.109.247.241:6678/api/users/profile/' + userToken.userData.data.id, {
+  
+  //       method: 'POST',
+  //       headers: {
+  
+  //         'token': 'bearer ' + userToken.userData.data.token,
+  //         'Content-Type': 'application/json'
+  //       },
+  //       // body: JSON.stringify(credentials)
+  
+  //     })
+  //       .then((response) => response.json())
+  //       .then((responseData) => {
+  //         console.log(responseData);
+  //         return responseData;
+  //       })
+  //       .catch(error => console.warn(error));
+  //   }, []);
+  
+    //  console.log("aa", user);
 
   return (
     <div>
@@ -98,20 +135,16 @@ export default function Signup() {
           <a href="/home" style={{ textDecoration: "none" }}>
             Home
           </a>{" "}
-          / Login /{" "}
-          <a href="/signup " style={{ textDecoration: "none" }}>
-            Register
-          </a>
+          / AddAddress
         </h4>
       </div>
       <div class="loginformCon signup">
-        <h4>HELLO</h4>
-        <h2>SIGNUP</h2>
+        <h4>ADD</h4>
+        <h2>ADDRESS</h2>
 
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          
         >
           {(props) => (
             <Form onSubmit={submitHandler}>
@@ -154,146 +187,101 @@ export default function Signup() {
                   <div class="row clearfix">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Email</label>
+                        <label>Pincode</label>
                         <Field
-                          name="email"
+                          name="pincode"
                           class="form-control"
-                          type="email"
-                          placeholder="Enter Email-ID"
+                          type="number"
+                          placeholder="Enter Pincode"
                         />
                         {/* <ErrorMessage name="email" /> */}
                         <div className="error">
-                          <ErrorMessage name="email" />
+                          <ErrorMessage name="pincode" />
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Password</label>
+                        <label>Phone Number</label>
                         <Field
-                          name="password"
+                          name="phoneno"
                           class="form-control"
-                          type="password"
-                          placeholder="Enter Password"
+                          type="number"
+                          placeholder="Enter Phone Number"
                         />
                         {/* <ErrorMessage name="password" /> */}
                         <div className="error">
-                          <ErrorMessage name="password" />
+                          <ErrorMessage name="phoneno" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <div class="form-group">
+                        <label>Address</label>
+                        <textarea
+                          name="address"
+                          class="form-control"
+                          placeholder="Enter Address"
+                          type="text"
+                        />
+                        <ErrorMessage name="address" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>City</label>
+                        <Field
+                          name="city"
+                          class="form-control"
+                          type="text"
+                          placeholder="Enter City"
+                        />
+                        {/* <ErrorMessage name="password" /> */}
+                        <div className="error">
+                          <ErrorMessage name="city" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>State</label>
+                        <Field
+                          name="state"
+                          class="form-control"
+                          type="text"
+                          placeholder="Enter State"
+                        />
+                        {/* <ErrorMessage name="password" /> */}
+                        <div className="error">
+                          <ErrorMessage name="state" />
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="row clearfix">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                       <div class="form-group">
-                        <label>Shop URL</label>
+                        <label>Landmark</label>
                         <Field
-                          name="shopurl"
+                          name="landmark"
                           class="form-control"
                           type="text"
-                          placeholder="Enter Shop-URL"
-                          disabled
+                          placeholder="Enter Landmark"
                         />
-                        <ErrorMessage name="shopurl" />
+                        <ErrorMessage name="landmark" />
                       </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Username</label>
-                        <Field
-                          name="username"
-                          class="form-control"
-                          type="text"
-                          placeholder="Enter Username"
-                        />
-                        {/* <ErrorMessage name="phoneno" /> */}
-                        <div className="error">
-                          <ErrorMessage name="username" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="clearfix">
-                    <div class="form-group">
-                      <label>Shop Name</label>
-                      <Field
-                        name="shopname"
-                        class="form-control"
-                        placeholder="Enter Shop Name"
-                        disabled
-                      ></Field>
-                      <ErrorMessage name="shopname" />
                     </div>
                   </div>
                 </div>
 
-                <div class="chooseonerow clearfix">
-                  <div class="form-group">
-                    <div
-                      class="chooseone"
-                      style={{
-                        display: "inline-block",
-                        verticalAlign: "middle",
-                      }}
-                    >
-                      <Field
-                        type="radio"
-                        name="radio-group "
-                        style={{ marginRight: "5px" }}
-                        disabled
-                      />{" "}
-                      <a
-                        href="/vendor "
-                        className="signupterms"
-                        style={{ fontFamily: "inherit" }}
-                      >
-                        I am a Vendor
-                      </a>
-                    </div>
-                    <div
-                      class="chooseone"
-                      style={{
-                        display: "inline-block",
-                        verticalAlign: "middle",
-                        marginLeft: "20px",
-                      }}
-                    >
-                      <div className="error">
-                        <ErrorMessage name="user" />
-                      </div>
-                      <Field type="radio" name="user" value="Customer" /> I am a
-                      Customer
-                      {/* <Field
-                        type="radio"
-                        name="radio-group "
-                        style={{ marginRight: "5px" }}
-                      />{" "} */}
-                    </div>
-                    {/* <ErrorMessage  name="first"/> */}
-                    {/* <a
-                      href="/signup "
-                      className="signupterms"
-                      //   style={{ color: "gold" }}
-                    >
-                      I am a Customer
-                    </a> */}
-                  </div>
-                </div>
-
-                <div class="signupterms">
-                  Your personal data will be used to support your experience
-                  throughout this website, to manage access to your account, and
-                  for other purposes described in our{" "}
-                  <a href=" ">privacy policy.</a>
-                </div>
                 <div class="loginbtnrow">
                   <button
                     class="loginbtn"
                     disabled={props.isSubmitting}
                     type="submit"
                   >
-                    {props.isSubmitting ? "Loading" : "REGISTER"}
+                    {props.isSubmitting ? "Loading" : "SAVE CHANGES"}
                   </button>
                 </div>
               </div>

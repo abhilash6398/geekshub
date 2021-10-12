@@ -32,7 +32,7 @@ export default class Banner extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/70dZbhZN4-banimg.jpg"} alt="" style={{height:"500px",width:"1000px"}}/>
+                        <img src={u.image.img} alt=""/>
                       </div>
                     </div>
                   </div>

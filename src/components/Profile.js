@@ -15,7 +15,7 @@ const Profile = () => {
   //     method: 'GET',
   //     headers: {
 
-  //       'token': 'bearer ' + userToken.token,
+  //       'token': 'bearer ' + userToken.userData.data.token,
   //       'Content-Type': 'application/json'
   //     },
   //     // body: JSON.stringify(credentials)
@@ -37,8 +37,13 @@ const Profile = () => {
         <div class="pgaddressrow">
           <h1 class="heading">My Account</h1>
           <h4 class="smheading">
-            <a href="/home">Home</a> / Profile{" "}
+            <a href="/home" style={{textDecoration:"none"}}>Home</a> / Profile{" "}
           </h4>
+        </div>
+
+        <div className="col-sm-2" style={{ textAlign: "right",marginLeft:"950px",fontStyle:"initial" }}>
+          <br/>
+          <button className="btn btn-warning"><a href="/editProfile" style={{color:"black",textDecoration:"none",fontWeight:"bold"}}>EDIT PROFILE</a></button>
         </div>
 
         <div class="container">
@@ -61,9 +66,11 @@ const Profile = () => {
                 <div class="col-sm-4">
                   <div class="nameconbox">
                     <h4>First Name</h4>
+                    {/* <p>{userToken.userData.data.token}</p> */}
                     <p class="paratrxt">
                       {userToken.userData.data.user.firstName}{" "}
                     </p>
+
                   </div>
 
                   <br />
@@ -81,7 +88,7 @@ const Profile = () => {
                       {userToken.userData.data.user.lastName}
                     </p>
                   </div>
-                  <br/>
+                  <br />
                   <div class="phoneconbox">
                     <h4>Username</h4>
                     <p class="paratrxt">

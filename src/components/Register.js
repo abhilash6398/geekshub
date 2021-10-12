@@ -17,9 +17,9 @@ const Register = () => {
   };
 
   const validationSchema = Yup.object().shape({
-    firstName: Yup.string()
-    .required("*Required")
-    .min(3, "Too short Name"),
+    // firstName: Yup.string()
+    // .required("*Required")
+    // .min(3, "Too short Name"),
     username: Yup.string()
 
       .required("*Required")
@@ -29,18 +29,17 @@ const Register = () => {
     // last: Yup.string().last("Enter valid LastName").require("Required")
     // .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,"Number & special character is restricted"),
 
-    email: Yup.string().email("Enter valid Email").required("*Required"),
+    // email: Yup.string().email("Enter valid Email").required("*Required"),
 
     password: Yup.string()
       .min(8, "Password minimum length should be 8")
       .required("*Required")
       .matches(/(?=.*[0-9])/, "Password must contain a number."),
 
-    shopurl: Yup.string()
-      .required("*Website should be a valid URL"),
-      // // .matches(
-      // //   /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/
-      // ),
+    shopurl: Yup.string().required("*Website should be a valid URL"),
+    // // .matches(
+    // //   /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/
+    // ),
 
     phoneno: Yup.number()
       .typeError("Enter valid Phone Number")
@@ -56,7 +55,7 @@ const Register = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     const firstName = event.target.firstName.value;
-    const lastName = event.target.last.value;
+    const lastName = event.target.lastName.value;
     // const phoneno = event.target.phoneno.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
@@ -116,10 +115,9 @@ const Register = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={onSubmit}
         >
           {(props) => (
-            <Form>
+            <Form onSubmit={onSubmit}>
               <div class="loginforminputs">
                 <div class="imvendwrap">
                   <div class="row clearfix">
