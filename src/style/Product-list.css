@@ -24,13 +24,13 @@
 	position: relative;
 	height: 320px;
 	background-color: #fff;
-	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+	/* box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15); */
 	-webkit-transition: all 400ms linear;
 	transition: all 400ms linear;
 }
-.productwtview:hover .imgview{
+/* .productwtview:hover .imgview{
 	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.40);
-}
+} */
 .productwtview .imgview span.offper{
 	font-family: 'Raleway-SemiBold';
 	position: absolute;

@@ -13,11 +13,12 @@ export default class Users extends Component {
     }
     getUsersData() {
         axios
-            .get(`/product`, {})
+            .get(`/productList`, {})
             .then(res => {
                 const data = res.data
                 console.log(data)
-                const users = data.map(u =>
+                console.log(data.data[0].image._id)
+                const users = data.data.map(u =>
                     // <div>
                     // <p>{u.desc}</p>
                     // <img src={u.img} alt=" "/>
@@ -26,9 +27,9 @@ export default class Users extends Component {
                     <div className="row clearfix">
                         <div className="col-sm-4">
                             <div className="productwtview">
-                                <div className="imgview"><img src={u.img} alt="" /></div>
+                                <div className="imgview"><img src={"http://3.109.247.241/node-team-B/geekshub/uploads/hb_RZpNbc-latestpro4.png"} alt="" /></div>
                                 <div className="proinfo">
-                                    <div className="pronm">{u.desc}</div>
+                                    <div className="pronm">{u.name}</div>
                                     <div className="proprice">Rs. {u.price}</div>
                                 </div>
                             </div>

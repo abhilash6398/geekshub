@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "./Axios";
-// import "../style/banner.css";
+import "../../style/banner.css";
 // import "../assets/css/style.css";
 
 export default class Banner extends Component {
@@ -17,12 +17,12 @@ export default class Banner extends Component {
         const data = res.data;
         console.log(data);
         const banners = data.data.map((u) => (
-          <div className="container">
+          <div className="container-fluid">
             <div class="shopbyintrest">
               <div class="titleviewrow">
-                <div class="titleview">
+                {/* <div class="titleview">
                   <span>posterPage</span>
-                </div>
+                </div> */}
               </div>
               <div class="shopviewint">
                 <div
@@ -32,8 +32,14 @@ export default class Banner extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={u.image.img} alt=""/>
+                        <img src={u.image._id} alt=""/>
+                        {/* {address.map((data,index) => (
+        <span key={index._id}>Name: {data.firstName} {data.lastName} </span>
+      )
+      )
+      } */}
                       </div>
+                      <span>{u.description}</span>
                     </div>
                   </div>
                 </div>

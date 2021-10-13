@@ -85,7 +85,7 @@ export default function Signup() {
       landmark,
     };
     axios
-      .post("http://3.109.247.241:6778/api/v2/customer/address/", data)
+      .post("http://3.109.247.241:6778/api/v2/customer/address", data)
       .then((response) => {
         console.log(response);
         event.target.reset();
@@ -130,7 +130,7 @@ export default function Signup() {
   return (
     <div>
       <div class="pgaddressrow">
-        <h1 class="heading">Login / Register</h1>
+        <h1 class="heading" style={{padding:"5px"}}>Add Address</h1>
         <h4 class="smheading">
           <a href="/home" style={{ textDecoration: "none" }}>
             Home

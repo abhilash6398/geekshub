@@ -17,7 +17,7 @@ export default class Brands extends Component {
         const data = res.data;
         console.log(data);
         const brands = data.data.map((u) => (
-          <div className="container">
+          <div className="container-fluid">
             <div class="shopbyintrest">
               <div class="titleviewrow">
                 <div class="titleview">
@@ -32,12 +32,12 @@ export default class Brands extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/zfUrnu1Yt-disney.jpg"} alt="" />
+                        {/* <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/zfUrnu1Yt-disney.jpg"} alt="" />
                         <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Sw5Z7sfIH-dc-logo.png"} alt="" />
                         <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/gBtuvIA23-fantasy-world.jpg"} alt="" />
                         <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/e5vMv7FmT-hamleys.jpg"} alt="" />
                         <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/fVQAxoll6-harry-potter.png"} alt="" />
-                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/_dXfmNYmb-marvel_logo.png"} alt="" />
+                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/_dXfmNYmb-marvel_logo.png"} alt="" /> */}
                       </div>
                       <div class="proinfo">
                         <div class="pronm">{u.name}</div>

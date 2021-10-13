@@ -10,6 +10,7 @@ export default class Product extends Component {
       Product: [],
     };
   }
+
   getProductsData() {
     axios
       .get(`productPage`, {})
@@ -32,9 +33,27 @@ export default class Product extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt="" style={{padding:"30px"}} />
-                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt="" style={{padding:"30px"}} />
-                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt="" style={{padding:"30px"}} />
+                        <img
+                          src={
+                            "http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"
+                          }
+                          alt=""
+                          style={{ padding: "30px" }}
+                        />
+                        <img
+                          src={
+                            "http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"
+                          }
+                          alt=""
+                          style={{ padding: "30px" }}
+                        />
+                        <img
+                          src={
+                            "http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"
+                          }
+                          alt=""
+                          style={{ padding: "30px" }}
+                        />
                       </div>
                       <div class="proinfo">
                         <div class="pronm">{u.name}</div>
@@ -62,6 +81,12 @@ export default class Product extends Component {
     this.getProductsData();
   }
   render() {
-    return <>{this.state.products}</>;
+    return (
+      <div>
+        {this.state.Product.map((item) => (
+          <div>{item.name}</div>
+        ))}
+      </div>
+    );
   }
 }

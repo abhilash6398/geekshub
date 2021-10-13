@@ -53,7 +53,7 @@ const Profile = () => {
                 <div class="col-sm-4">
                   <div class="control-group file-upload" id="file-upload1">
                     <div class="image-box text-center">
-                      <p> {userToken.userData.data.user.profilePic} </p>
+                      <p> {userToken.userData.data.user.profilePicture} </p>
                       <img src="" alt=" " />
                     </div>
 
