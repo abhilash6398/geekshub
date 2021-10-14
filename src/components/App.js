@@ -20,6 +20,11 @@ import EditProfile from "./editProfile";
 import Users from "./AllProduct";
 import AddAddress from "./addAddress";
 import Address from "./address";
+import Main from "./Main";
+import Featured from "./Featured";
+import Categories from "./Categories";
+import Productt from "./Products";
+import Baner from "./Baner";
 // import axios from 'axios';
 
 function App() {
@@ -106,6 +111,21 @@ function App() {
           </Route>
           <Route path="/address">
             <Address />
+          </Route>
+          <Route path="/main">
+            <Main />
+          </Route>
+          <Route path="/featured">
+            <Featured />
+          </Route>
+          <Route path="/categories">
+            <Categories />
+          </Route>
+          <Route path="/productt">
+            <Productt />
+          </Route>
+          <Route path="/baner">
+            <Baner />
           </Route>
         </Switch>
       </Router>

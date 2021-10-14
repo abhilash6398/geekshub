@@ -32,7 +32,7 @@ export default class Category extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={"http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg"} alt=""/>
+                        <img src="http://3.109.247.241/node-team-B/geekshub/uploads/Quy4lNtQ4-shop_interst2.jpg" alt=""/>
                       </div>
                       <div class="proinfo">
                         <div class="pronm"><a href="/prodDetails">{u.name}</a></div>

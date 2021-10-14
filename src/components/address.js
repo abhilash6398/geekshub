@@ -66,8 +66,8 @@ const Address = () => {
         style={{ marginLeft: "25px", width: "50%", textAlign: "left" }}
       >
         {/* <h1>Address Listing: </h1> */}
-        {address.map((data, index) => (
-          <span key={index._id}>
+        {address.map((data) => (
+          <span>
             Name: {data.firstName} {data.lastName}{" "}
           </span>
         ))}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "./Axios";
-import "../../style/banner.css";
+// import "../../style/banner.css";
 // import "../assets/css/style.css";
 
 export default class Banner extends Component {
@@ -16,7 +16,8 @@ export default class Banner extends Component {
       .then((res) => {
         const data = res.data;
         console.log(data);
-        const banners = data.data.map((u) => (
+        console.log(data.data[0].image[0].img);
+        const banners = data.data.map((data) => (
           <div className="container-fluid">
             <div class="shopbyintrest">
               <div class="titleviewrow">
@@ -32,14 +33,9 @@ export default class Banner extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src={u.image._id} alt=""/>
-                        {/* {address.map((data,index) => (
-        <span key={index._id}>Name: {data.firstName} {data.lastName} </span>
-      )
-      )
-      } */}
+                        <img src="http://3.109.247.241/node-team-B/geekshub/uploads/T0nGP4yvR-banimg.png" alt="" style={{height:"300px",width:"600px"}} />
                       </div>
-                      <span>{u.description}</span>
+                      {/* <span>{data.description}</span> */}
                     </div>
                   </div>
                 </div>
@@ -61,6 +57,9 @@ export default class Banner extends Component {
     this.getBannersData();
   }
   render() {
-    return <>{this.state.banners}</>;
+    return <>{this.state.banners}
+    <banners Banner={Banner}/>
+
+    </>;
   }
 }
