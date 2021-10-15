@@ -28,6 +28,7 @@ import shopInterest4 from "./shop_interst4.jpg";
 import latestpro2 from "./latestpro2.png";
 import latestpro3 from "./latestpro3.png";
 import latestpro4 from "./latestpro4.png";
+import logo from "./logo.png";
 
 export {
   disney,
@@ -60,4 +61,5 @@ export {
   latestpro2,
   latestpro3,
   latestpro4,
+  logo
 };

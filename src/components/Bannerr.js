@@ -6,7 +6,7 @@ import "../style/Bannerr.css"
 const Bannerr = () => {
     return (
         <div className="banner">
-            <img src={Banimg2} alt="Banner-img" />
+            <img src={Banimg2} alt="Banner-img"  />
         </div>
     )
 }

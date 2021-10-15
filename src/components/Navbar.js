@@ -25,7 +25,9 @@ const Nav = () => {
             <li>
               <a href="/home"> Home</a>
             </li>
-            <li>About us</li>
+            <li>
+              <a href="/aboutus"> About Us</a>
+            </li>
             <li>Latest Products</li>
             <li>Contact us</li>
             <li>
@@ -75,7 +77,9 @@ const Nav = () => {
         </div>
         <div className="icon__name">
           <ul>
-            <li><a href="/profile" >Account</a></li>
+            <li>
+              <a href="/profile">Account</a>
+            </li>
             <li>Wishlist</li>
             <li>Cart</li>
             <li>Search</li>

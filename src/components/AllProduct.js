@@ -17,7 +17,7 @@ export default class Users extends Component {
       .then((res) => {
         const data = res.data;
         console.log(data);
-        console.log(data.data[0].image._id);
+        console.log(data.data[0].image[0].img);
         const users = data.data.map((u) => (
           // <div>
           // <p>{u.desc}</p>
@@ -29,9 +29,7 @@ export default class Users extends Component {
               <div className="productwtview">
                 <div className="imgview">
                   <img
-                    src={
-                      "http://3.109.247.241/node-team-B/geekshub/uploads/hb_RZpNbc-latestpro4.png"
-                    }
+                    src="http://3.109.247.241/node-team-B/geekshub/uploads/hb_RZpNbc-latestpro4.png"
                     alt=""
                   />
                 </div>

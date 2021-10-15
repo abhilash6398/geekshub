@@ -25,6 +25,7 @@ import Featured from "./Featured";
 import Categories from "./Categories";
 import Productt from "./Products";
 import Baner from "./Baner";
+import Aboutus from "./Aboutus";
 // import axios from 'axios';
 
 function App() {
@@ -126,6 +127,9 @@ function App() {
           </Route>
           <Route path="/baner">
             <Baner />
+          </Route>
+          <Route path="/aboutus">
+            <Aboutus />
           </Route>
         </Switch>
       </Router>
