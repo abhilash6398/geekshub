@@ -61,7 +61,7 @@ function AddAddress () {
       <input type="text" value={state} onChange={(e)=>{setState(e.target.value)}} placeholder="State: "/><br/>
       <label>Landmark</label>
       <input type="text" value={landmark} onChange={(e)=>{setLandmark(e.target.value)}} placeholder="Landmark: "/><br/>
-      <label>Mobile NUmber</label>
+      <label>Mobile Number</label>
       <input type="number" value={mobile} onChange={(e)=>{setMobile(e.target.value)}} placeholder="Mobile: "/><br/>
       <button type="submit" className="btn btn-warning" onClick={saveChanges}>Save Changes</button>
     </div>

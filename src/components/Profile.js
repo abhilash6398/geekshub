@@ -54,7 +54,7 @@ const Profile = () => {
                   <div class="control-group file-upload" id="file-upload1">
                     <div class="image-box text-center">
                       <p> {userToken.userData.data.user.profilePicture} </p>
-                      <img src="" alt=" " />
+                      <img src="{userToken.userData.data.user.profilePicture}" alt=" " />
                     </div>
 
                     <div class="controls" style={{ display: "none" }}>

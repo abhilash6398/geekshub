@@ -26,6 +26,7 @@ import Productt from "./Products";
 import Baner from "./Baner";
 import Aboutus from "./Aboutus";
 import AddAddress from "./AddAddress";
+import GetProfile from "./GetProfile";
 // import axios from 'axios';
 
 function App() {
@@ -129,6 +130,9 @@ function App() {
           </Route>
           <Route path="/aboutus">
             <Aboutus />
+          </Route>
+          <Route path="/getprofile">
+            <GetProfile />
           </Route>
         </Switch>
       </Router>

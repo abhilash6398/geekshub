@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import useToken from "./useToken";
 
-const Address = () => {
+const GetProfile = () => {
   const userToken = useToken();
-  const [address, setAddress] = useState([]);
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
     // POST request using fetch inside useEffect React hook
@@ -15,18 +15,18 @@ const Address = () => {
       },
       // body: JSON.stringify({ title: "React Hooks POST Request Example" }),
     };
-    fetch("http://3.109.247.241:6778/api/v2/customer/address", requestOptions)
+    fetch("http://3.109.247.241:6778/api/v2/customer/profile", requestOptions)
       .then((response) => response.json())
       .then((responseData) => {
         // console.log(responseData);
         // console.log(userToken.userData.data.token);
 
-        setAddress([...responseData.data]);
+        setUser([userToken.userData.data]);
 
         // responseData.data.map((e)=>address.push(e))
         // setAddress(...address);
-        console.log("Array Data in Address:", address);
-        console.log(responseData.data);
+        console.log("Array Data in Address:", user);
+        console.log(userToken.userData.data.user);
       })
       // .then(response=>setAddress(response))
       // console.log(response)
@@ -49,14 +49,14 @@ const Address = () => {
           <br />
           <button className="btn btn-warning">
             <a
-              href="/addaddress"
+              href="/editProfile"
               style={{
                 color: "black",
                 textDecoration: "none",
                 fontWeight: "bold",
               }}
             >
-              ADD ADDRESS
+              Edit Profile
             </a>
           </button>
         </div>
@@ -66,14 +66,21 @@ const Address = () => {
         style={{ marginLeft: "25px", width: "50%", textAlign: "left" }}
       >
         {/* <h1>Address Listing: </h1> */}
-        {address.map((data) => {
+        {user.map((data) => {
           return (
             <div className="card">
               <p>
-                Full Name: {data.firstName} {data.lastName}{" "}
-              </p>
-              <p>Address: {data.address}</p>
-              <p>Mobile Number: {data.mobile} </p>
+                First Name: {data.user.firstName} 
+              </p><br/>
+              <p>
+                Last Name: {data.user.lastName} 
+              </p><br/>
+              <p>
+                Username: {data.user.username} 
+              </p><br/>
+              <p>
+                Email: {data.user.email} 
+              </p><br/>
               <br/>
             </div>
           );
@@ -83,7 +90,7 @@ const Address = () => {
   );
 };
 
-export default Address;
+export default GetProfile;
 
 // return address.map(a=>
 //     <div>
