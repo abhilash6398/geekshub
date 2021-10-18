@@ -30,7 +30,7 @@ const Aboutus = () => {
             </div>
             <div className="col-sm-6">
               <br />
-              <h3>Welcome to Geekshub</h3>
+              <h2>Welcome to Geekshub</h2>
               <p>
                 is slechts een proeftekst uit het drukkerij- en zetterijwezen.
                 Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds
@@ -77,6 +77,9 @@ const Aboutus = () => {
           </div>
         </div>
       </div>
+      <br/><br/>
+      <br/><br/>
+      <br/><br/>
       <FooterComponent/>
     </>
 

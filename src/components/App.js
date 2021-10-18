@@ -18,7 +18,6 @@ import Vendor from "./Home/vendor";
 import ProdDetails from "./Prod_Details";
 import EditProfile from "./editProfile";
 import Users from "./AllProduct";
-import AddAddress from "./addAddress";
 import Address from "./address";
 import Main from "./Main";
 import Featured from "./Featured";
@@ -26,6 +25,7 @@ import Categories from "./Categories";
 import Productt from "./Products";
 import Baner from "./Baner";
 import Aboutus from "./Aboutus";
+import AddAddress from "./AddAddress";
 // import axios from 'axios';
 
 function App() {
@@ -46,8 +46,7 @@ function App() {
       <div className="container">
         <h4 class="smheading">
           {/* <a href="/home"> Home </a> / <a href="/profile">My Profile</a> /{" "} */}
-          <a href="/"> Home </a> / 
-          <a href="/vendor"> Vendor Reg</a> /{" "}
+          <a href="/"> Home </a> /<a href="/vendor"> Vendor Reg</a> /{" "}
           <a href="/forgot"> Forgot Password </a> /{" "}
           <a href="/reset"> Reset Password </a> /{" "}
           <a href="/login" onClick={logOut}>

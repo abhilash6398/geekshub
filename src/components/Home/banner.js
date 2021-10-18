@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useCallback, useEffect } from "react";
 import axios from "./Axios";
 // import "../../style/banner.css";
 // import "../assets/css/style.css";
@@ -33,7 +33,7 @@ export default class Banner extends Component {
                   <div class="item clearfix">
                     <div class="productwtview">
                       <div class="imgview">
-                        <img src="http://3.109.247.241/node-team-B/geekshub/uploads/T0nGP4yvR-banimg.png" alt="" style={{height:"300px",width:"600px"}} />
+                        <img src={data.image.img} alt="" style={{height:"300px",width:"600px"}} />
                       </div>
                       {/* <span>{data.description}</span> */}
                     </div>

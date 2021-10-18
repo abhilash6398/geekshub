@@ -30,17 +30,6 @@ const Nav = () => {
             </li>
             <li>Latest Products</li>
             <li>Contact us</li>
-            <li>
-              Shop
-              <div class="dropdown-content">
-                <a href="# ">Baby and Todlar Toys</a>
-                <a href="# ">Dolls & Accessories</a>
-                <a href="# ">Dress Up & Pretend Play</a>
-                <a href="# ">PC & Mobile Accessories</a>
-                <a href="# ">Video Games</a>
-                <a href="# ">Ride-Ons Tricycles & Wagons</a>
-              </div>
-            </li>
           </ul>
         </div>
       </BrowserRouter>
