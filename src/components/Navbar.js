@@ -29,7 +29,7 @@ const Nav = () => {
               <a href="/aboutus"> About Us</a>
             </li>
             <li>Latest Products</li>
-            <li>Contact us</li>
+            <li><a href="/contactus"> Contact Us</a></li>
           </ul>
         </div>
       </BrowserRouter>
