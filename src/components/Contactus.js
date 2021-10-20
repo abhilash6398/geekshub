@@ -39,7 +39,7 @@ function Contactus() {
   //   })
   //   .catch((error) => console.warn(error));
   return (
-    <div className="container">
+    <>
       <div className="pgaddressrow">
         <h1 className="heading">Contact Us </h1>
         <h4 className="smheading">
@@ -49,113 +49,117 @@ function Contactus() {
           / Contact Us
         </h4>
       </div>
-      <div class="loginforminputs">
-        <div class="imvendwrap">
-          <div class="row clearfix">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Yourname</label>
-                <input
-                  name="yourName"
-                  class="form-control"
-                  type="text"
-                  placeholder="Enter Your Name"
-                  value={yourname}
-                  onChange={(e) => {
-                    setYourName(e.target.value);
-                  }}
-                />
+      <div className="container">
+        <div class="loginforminputs">
+          <div class="imvendwrap">
+            <div class="row clearfix">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Yourname</label>
+                  <input
+                    name="yourName"
+                    class="form-control"
+                    type="text"
+                    placeholder="Enter Your Name"
+                    value={yourname}
+                    onChange={(e) => {
+                      setYourName(e.target.value);
+                    }}
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <h4>
+                    <strong>Address</strong>
+                  </h4>
+                  <hr />
+                  <p className="text-muted">
+                    Kuwait City, Al-Shuhada Street,Al-Hamra Mall, Floor 35
+                  </p>
+                  <br />
+                </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <h4>
-                  <strong>Address</strong>
-                </h4>
-                <hr />
-                <p className="text-muted">Kuwait City, Al-Shuhada Street,Al-Hamra Mall, Floor 35</p>
-                <br/>
+            <div class="row clearfix">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input
+                    name="Email Address"
+                    class="form-control"
+                    type="email"
+                    placeholder="Enter Email Address"
+                    value={emailaddress}
+                    onChange={(e) => {
+                      setEmailAddress(e.target.value);
+                    }}
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <h4>
+                    <strong>Phone Number</strong>
+                  </h4>
+                  <hr />
+                  <p className="text-muted">+965-22203555</p>
+                  <p className="text-muted">Sun to Thurs from 8AM to 4PM</p>
+                  <br />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row clearfix">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Email Address</label>
-                <input
-                  name="Email Address"
-                  class="form-control"
-                  type="email"
-                  placeholder="Enter Email Address"
-                  value={emailaddress}
-                  onChange={(e) => {
-                    setEmailAddress(e.target.value);
-                  }}
-                />
+            <div class="row clearfix">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input
+                    name="phonenumber"
+                    class="form-control"
+                    type="number"
+                    placeholder="Enter Phone Number"
+                    value={phonenumber}
+                    onChange={(e) => {
+                      setPhoneNumber(e.target.value);
+                    }}
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <h4>
+                    <strong>info@geekshub.com</strong>
+                  </h4>
+                  <hr />
+                  <p className="text-muted">Send us your query anytime</p>
+                  <br />
+                </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <h4>
-                  <strong>Phone Number</strong>
-                </h4>
-                <hr />
-                <p className="text-muted">+965-22203555</p>
-                <p className="text-muted">Sun to Thurs from 8AM to 4PM</p>
-                <br/>
-              </div>
-            </div>
-          </div>
-          <div class="row clearfix">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input
-                  name="phonenumber"
-                  class="form-control"
-                  type="number"
-                  placeholder="Enter Phone Number"
-                  value={phonenumber}
-                  onChange={(e) => {
-                    setPhoneNumber(e.target.value);
-                  }}
-                />
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <h4>
-                  <strong>info@geekshub.com</strong>
-                </h4>
-                <hr />
-                <p className="text-muted">Send us your query anytime</p>
-                <br/>
-              </div>
-            </div>
-          </div>
-          <div class="row clearfix">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Message</label>
-                <input
-                  name="Message"
-                  class="form-control"
-                  type="textarea"
-                  placeholder="Enter your Message"
-                  value={message}
-                  onChange={(e) => {
-                    setMessage(e.target.value);
-                  }}
-                />
+            <div class="row clearfix">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Message</label>
+                  <input
+                    name="Message"
+                    class="form-control"
+                    type="textarea"
+                    placeholder="Enter your Message"
+                    value={message}
+                    onChange={(e) => {
+                      setMessage(e.target.value);
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <button type="submit" className="btn btn-warning" onClick={saveChanges}>
+          Save Changes
+        </button>
       </div>
-      <button type="submit" className="btn btn-warning" onClick={saveChanges}>
-        Save Changes
-      </button>
-    </div>
+    </>
   );
 }
 

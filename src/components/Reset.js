@@ -13,7 +13,7 @@ const Reset = () => {
     console.warn({email,otp,newpassword});
     let data = {email,otp,newpassword};
     fetch("http://3.109.247.241:6778/api/v2/customer/resetPassword", {
-      method: "POST",
+      method: "PUT",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
