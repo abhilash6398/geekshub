@@ -147,161 +147,161 @@ function AddAddress() {
           Save Changes
         </button>
       </div> */}
+      <div class="pgaddressrow">
+        <h1 class="heading">Add Address</h1>
+        <h4 class="smheading">
+          <a href="/home ">Home</a> / Add Address
+        </h4>
+      </div>
       <div className="container">
-      <div class="loginwrap">
-        <div class="pgaddressrow">
-          <h1 class="heading">Add Address</h1>
-          <h4 class="smheading">
-            <a href="/home ">Home</a> / Add Address
-          </h4>
-        </div>
-        <div class="loginformCon signup">
-        <h4>ADD</h4>
-        <h2>ADDRESS</h2>
-          <div class="loginforminputs">
-            <div class="imvendwrap">
-              <div class="row clearfix">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label>First Name</label>
-                    <input
-                      name="firstName"
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter Your First Name"
-                      value={firstName}
-                      onChange={(e) => {
-                        setFirstName(e.target.value);
-                      }}
-                    />
+        <div class="loginwrap">
+          <div class="loginformCon signup">
+            <h4>ADD</h4>
+            <h2>ADDRESS</h2>
+            <div class="loginforminputs">
+              <div class="imvendwrap">
+                <div class="row clearfix">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input
+                        name="firstName"
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter Your First Name"
+                        value={firstName}
+                        onChange={(e) => {
+                          setFirstName(e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Last Name</label>
+                      <input
+                        name="lastName"
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter Your Last Name"
+                        value={lastName}
+                        onChange={(e) => {
+                          setLastName(e.target.value);
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label>Last Name</label>
-                    <input
-                      name="lastName"
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter Your Last Name"
-                      value={lastName}
-                      onChange={(e) => {
-                        setLastName(e.target.value);
-                      }}
-                    />
+                <div class="row clearfix">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Pincode</label>
+                      <input
+                        name="pincode"
+                        class="form-control"
+                        type="number"
+                        placeholder="Enter Your Pincode"
+                        value={pincode}
+                        onChange={(e) => {
+                          setPincode(e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Phone Number</label>
+                      <input
+                        name="phonenumber"
+                        class="form-control"
+                        type="number"
+                        placeholder="Enter Your Phone Number"
+                        value={mobile}
+                        onChange={(e) => {
+                          setMobile(e.target.value);
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="row clearfix">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label>Pincode</label>
-                    <input
-                      name="pincode"
-                      class="form-control"
-                      type="number"
-                      placeholder="Enter Your Pincode"
-                      value={pincode}
-                      onChange={(e) => {
-                        setPincode(e.target.value);
-                      }}
-                    />
+                <div class="row clearfix">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input
+                        name="address"
+                        class="form-control"
+                        type="textarea"
+                        placeholder="Enter Your Address"
+                        value={address}
+                        onChange={(e) => {
+                          setAddress(e.target.value);
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label>Phone Number</label>
-                    <input
-                      name="phonenumber"
-                      class="form-control"
-                      type="number"
-                      placeholder="Enter Your Phone Number"
-                      value={mobile}
-                      onChange={(e) => {
-                        setMobile(e.target.value);
-                      }}
-                    />
+                <div class="row clearfix">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>City</label>
+                      <input
+                        name="city"
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter Your City"
+                        value={city}
+                        onChange={(e) => {
+                          setCity(e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>State</label>
+                      <input
+                        name="state"
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter Your State"
+                        value={state}
+                        onChange={(e) => {
+                          setState(e.target.value);
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="row clearfix">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label>Address</label>
-                    <input
-                      name="address"
-                      class="form-control"
-                      type="textarea"
-                      placeholder="Enter Your Address"
-                      value={address}
-                      onChange={(e) => {
-                        setAddress(e.target.value);
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="row clearfix">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label>City</label>
-                    <input
-                      name="city"
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter Your City"
-                      value={city}
-                      onChange={(e) => {
-                        setCity(e.target.value);
-                      }}
-                    />
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label>State</label>
-                    <input
-                      name="state"
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter Your State"
-                      value={state}
-                      onChange={(e) => {
-                        setState(e.target.value);
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="row clearfix">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label>Landmark</label>
-                    <input
-                      name="landmark"
-                      class="form-control"
-                      type="textarea"
-                      placeholder="Enter Your Landmark"
-                      value={landmark}
-                      onChange={(e) => {
-                        setLandmark(e.target.value);
-                      }}
-                    />
+                <div class="row clearfix">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>Landmark</label>
+                      <input
+                        name="landmark"
+                        class="form-control"
+                        type="textarea"
+                        placeholder="Enter Your Landmark"
+                        value={landmark}
+                        onChange={(e) => {
+                          setLandmark(e.target.value);
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
+              <button
+                type="submit"
+                className="btn btn-warning"
+                onClick={saveChanges}
+              >
+                SAVE
+              </button>
             </div>
-            <button
-              type="submit"
-              className="btn btn-warning"
-              onClick={saveChanges}
-            >
-              SAVE
-            </button>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 }
