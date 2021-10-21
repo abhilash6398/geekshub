@@ -1,5 +1,5 @@
-/* .centered {
-  padding: 176px;
+.centered {
+  padding: 100px;
 }
 
 body {
@@ -67,7 +67,7 @@ img {
 }
 
 .card {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   background: #eee;
   padding: 3em;
   line-height: 1.5em;
@@ -159,7 +159,7 @@ img {
 }
 .add-to-cart:hover,
 .like:hover {
-  background: #b36800;
+  background: red;
   color: #fff;
 }
 
@@ -213,4 +213,4 @@ img {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-} */
+}
