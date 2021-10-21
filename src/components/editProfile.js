@@ -49,7 +49,7 @@ function AddAddress() {
       <div class="pgaddressrow">
         <h1 class="heading">Edit Profile</h1>
         <h4 class="smheading">
-          <a href="/home ">Home</a> / Edit Profile
+          <a href="/home " style={{textDecoration:"none"}}>Home</a> / Edit Profile
         </h4>
       </div>
       <div className="container">

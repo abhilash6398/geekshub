@@ -26,19 +26,34 @@ const Nav = () => {
         <div className="Nav__links">
           <ul>
             <li>
-              <a href="/home"> Home</a>
+              <a href="/home" style={{ textDecoration: "none" }}>
+                {" "}
+                Home
+              </a>
             </li>
             <li>
-              <a href="/aboutus"> About Us</a>
+              <a href="/aboutus" style={{ textDecoration: "none" }}>
+                {" "}
+                About Us
+              </a>
             </li>
             <li>
-              Latest Products
+              <a href="# " style={{ textDecoration: "none" }}>
+                {" "}
+                Latest Products
+              </a>
             </li>
             <li>
-              <a href="/contactus "> Contact Us</a>
+              <a href="/contactus " style={{ textDecoration: "none" }}>
+                {" "}
+                Contact Us
+              </a>
             </li>
             <li>
-              <a href="/vendor"> Vendor</a>
+              <a href="/vendor" style={{ textDecoration: "none" }}>
+                {" "}
+                Vendor
+              </a>
             </li>
           </ul>
         </div>

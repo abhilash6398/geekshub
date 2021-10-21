@@ -17,9 +17,10 @@
   /* border: 1px solid black; */
   justify-content: center;
   margin-top: 22px;
+  color: gray;
 }
 
-.Nav__links ul li {
+.Nav__links ul li a{
   display: flex;
   justify-content: space-evenly;
   /* margin: 10px; */
@@ -27,9 +28,10 @@
   cursor: pointer;
   font-weight: 500;
   text-transform: uppercase;
+  color: gray;
 }
 
-.Nav__links ul li:hover {
+.Nav__links ul li:hover a:hover{
   color: gold;
 }
 
