@@ -68,13 +68,28 @@ const Address = () => {
         {/* <h1>Address Listing: </h1> */}
         {address.map((data) => {
           return (
-            <div className="card">
-              <p>
-                Full Name: {data.firstName} {data.lastName}{" "}
-              </p>
-              <p>Address: {data.address}</p>
-              <p>Mobile Number: {data.mobile} </p>
-              <br/>
+            <div className="container">
+              <div className="profilinputs">
+                <div className="imvendwrap">
+                  <div className="row clearfix">
+                    <div className="nameconbox">
+                      <h4>
+                        Full Name: {data.firstName} {data.lastName}
+                      </h4>
+                    </div>
+                    <div className="nameconbox">
+                      <h4>Address: {data.address}</h4>
+                      <h5> Landmark: {data.landmark}</h5>
+                      <h6> City: {data.city}</h6>
+                      <p> State: {data.state}</p>
+                      <p> Pincode: {data.pincode}</p>
+                    </div>
+                    <div className="nameconbox">
+                      <h4>Mobile: {data.mobile}</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           );
         })}

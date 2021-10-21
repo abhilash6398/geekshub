@@ -1,21 +1,19 @@
 import React from "react";
+import { Carousel } from "react-bootstrap";
 
 const Baner = (props) => {
-    const {image,url} = props;
+  const { image, url } = props;
   return (
     <div>
-      <div className="container">
-        <h1>Banner Page</h1>
-        <br/>
-
-        {/* {/ <img src={image} alt=" "/> /} */}
-        <div className="XYZ">
-            <img src={image} alt="" />
-        </div>
-        <div className="XYZ" style={{marginLeft:"50px"}}>
-            <h3>{url}</h3>
-        </div>
-      </div>
+      <Carousel>
+        <Carousel.Item>
+          <img className="d-block w-100" src={image} alt={url} />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={image} alt={url} />
+          <img className="d-block w-100" src={image} alt={url} />
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 };

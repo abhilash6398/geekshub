@@ -1,9 +1,12 @@
 import React from "react";
 import "../style/Navbar.css";
-import { Navbar, Container, Dropdown } from "react-bootstrap";
+import { Navbar, Container, NavDropdown } from "react-bootstrap";
 import logo from "../assets/images/logo.png";
 import { BrowserRouter, Link } from "react-router-dom";
 const Nav = () => {
+  const logOut = () => {
+    localStorage.clear();
+  };
   return (
     <div className="Nav__head">
       <Navbar bg="light" sticky="top">
@@ -28,8 +31,15 @@ const Nav = () => {
             <li>
               <a href="/aboutus"> About Us</a>
             </li>
-            <li>Latest Products</li>
-            <li><a href="/contactus"> Contact Us</a></li>
+            <li>
+              <a href="# "> Latest Products</a>
+            </li>
+            <li>
+              <a href="/contactus "> Contact Us</a>
+            </li>
+            <li>
+              <a href="/vendor"> Vendor</a>
+            </li>
           </ul>
         </div>
       </BrowserRouter>
@@ -67,7 +77,26 @@ const Nav = () => {
         <div className="icon__name">
           <ul>
             <li>
-              <a href="/profile">Account</a>
+              Account{" "}
+              <NavDropdown
+                style={{ display: "inline !important" }}
+                id="nav-dropdown-dark-example"
+                menuVariant="light"
+              >
+                <NavDropdown.Item href="/profile">Profile </NavDropdown.Item>
+                <NavDropdown.Item href="/address">
+                  Saved Address{" "}
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/forgot">
+                  Forgot Password{" "}
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/reset">
+                  Reset Password{" "}
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/login" onClick={logOut}>
+                  Logout
+                </NavDropdown.Item>{" "}
+              </NavDropdown>
             </li>
             <li>Wishlist</li>
             <li>Cart</li>

@@ -48,12 +48,9 @@ function App() {
       <div className="container">
         <h4 class="smheading">
           {/* <a href="/home"> Home </a> / <a href="/profile">My Profile</a> /{" "} */}
-          <a href="/"> Home </a> /<a href="/vendor"> Vendor Reg</a> /{" "}
-          <a href="/forgot"> Forgot Password </a> /{" "}
-          <a href="/reset"> Reset Password </a> /{" "}
-          <a href="/login" onClick={logOut}>
+          {/* <a href="/login" onClick={logOut}>
             Logout
-          </a>
+          </a> */}
           {/* / <a href="/vendor">Logout</a> */}
         </h4>
       </div>
