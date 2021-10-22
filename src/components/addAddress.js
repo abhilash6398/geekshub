@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router";
 import useToken from "./useToken";
-import { Link, useHistory } from "react-router-dom";
 
 function AddAddress() {
   const userToken = useToken();
