@@ -31,7 +31,7 @@ const Reset = () => {
         <div class="pgaddressrow">
           <h1 class="heading">Reset Password</h1>
           <h4 class="smheading">
-            <a href="/home ">Home</a> / Login / <a href="/reset ">Reset</a>
+            <a href="/home " style={{textDecoration:"none"}}>Home</a> / Login / <a href="/reset " style={{textDecoration:"none"}}>Reset</a>
           </h4>
         </div>
         <div class="loginformCon signup">
