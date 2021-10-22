@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useToken from "./useToken";
 
-function AddAddress() {
+function EditProfile() {
   const userToken = useToken();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -55,8 +55,8 @@ function AddAddress() {
       <div className="container">
         <div class="loginwrap">
           <div class="loginformCon signup">
-            <h4>ADD</h4>
-            <h2>ADDRESS</h2>
+            <h4>EDIT</h4>
+            <h2>PROFILE</h2>
             <div class="loginforminputs">
               <div class="imvendwrap">
                 <div class="row clearfix">
@@ -107,4 +107,4 @@ function AddAddress() {
   );
 }
 
-export default AddAddress;
+export default EditProfile;
