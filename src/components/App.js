@@ -25,7 +25,7 @@ import Categories from "./Categories";
 import Productt from "./Products";
 import Baner from "./Baner";
 import Aboutus from "./Aboutus";
-import AddAddress from "./AddAddress";
+import AddAddress from "./addAddress";
 import GetProfile from "./GetProfile";
 import Contactus from "./Contactus";
 // import axios from 'axios';
