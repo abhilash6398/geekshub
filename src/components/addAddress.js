@@ -314,4 +314,4 @@ function AddAddress() {
   );
 }
 
-export default withRouter(AddAddress);
+export default AddAddress;
