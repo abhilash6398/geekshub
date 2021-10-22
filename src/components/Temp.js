@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Nav from "./Navbar";
-import { BrowserRouter, Redirect, Router } from "react-router-dom";
+// import { BrowserRouter, Redirect, Router } from "react-router-dom";
 
 import "../style/Login.css";
 import FooterComponent from "./Footer";

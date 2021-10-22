@@ -38,9 +38,9 @@ function App() {
   }
 
   // Logout
-  const logOut = () => {
-    localStorage.clear();
-  };
+  // const logOut = () => {
+  //   localStorage.clear();
+  // };
 
   return (
     <>

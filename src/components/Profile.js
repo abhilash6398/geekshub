@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../style/Profile.css";
 import useToken from "./useToken";
 
 // import {useHistory} from 'react-router-dom';
-import axios from "axios";
+// import axios from "axios";
 
 const Profile = () => {
   const userToken = useToken();

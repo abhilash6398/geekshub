@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from "./Navbar";
-import { Link } from "react-router-dom";
 import {
   disney,
   marvel,
@@ -8,11 +6,7 @@ import {
   harrypotter,
   gamethrones,
   Banimg,
-  Banimg2,
   pro1,
-  pro3,
-  pro4,
-  pro2,
   shopInterest4,
   shopInterest,
   shopInterest2,
@@ -169,7 +163,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1} alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -186,7 +180,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1} alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -203,7 +197,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1} alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -220,7 +214,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1} alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -239,7 +233,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1}  alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -256,7 +250,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1}  alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -273,7 +267,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1}  alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -290,7 +284,7 @@ function Home() {
                   className="card"
                   style={{ width: "18rem", display: "flex" }}
                 >
-                  <img className="card-img-top" src={pro1} />
+                  <img className="card-img-top" src={pro1}  alt={pro1} />
                 </div>
                 <div className="proinfo" style={{ textAlign: "center" }}>
                   <div className="pronm">Ceramic Monster Figurine</div>
@@ -595,35 +589,35 @@ function Home() {
               <img
                 class="card-img-top"
                 src={shopInterest}
-                alt="Card image cap"
+                alt={shopInterest}
               />
             </div>
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
               <img
                 class="card-img-top"
                 src={shopInterest1}
-                alt="Card image cap"
+                alt={shopInterest1}
               />
             </div>
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
               <img
                 class="card-img-top"
                 src={shopInterest2}
-                alt="Card image cap"
+                alt={shopInterest2}
               />
             </div>
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
               <img
                 class="card-img-top"
                 src={shopInterest3}
-                alt="Card image cap"
+                alt={shopInterest3}
               />
             </div>
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
               <img
                 class="card-img-top"
                 src={shopInterest4}
-                alt="Card image cap"
+                alt={shopInterest4}
               />
             </div>
           </div>
@@ -644,7 +638,7 @@ function Home() {
               <img
                 class="card-img-top"
                 src={CategoryImage}
-                alt="Card image cap"
+                alt={CategoryImage}
                 style={{ width: "18rem", padding: "10px" }}
               />
             </div>
@@ -663,7 +657,7 @@ function Home() {
               <img
                 class="card-img-top"
                 src={CategoryImage2}
-                alt="Card image cap"
+                alt={CategoryImage2}
                 style={{ width: "18rem", padding: "10px", height: "18rem" }}
               />
             </div>
@@ -676,16 +670,16 @@ function Home() {
           <br />
           <div class="card-group">
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
-              <img class="card-img-top" src={disney} alt="Card image cap" />
+              <img class="card-img-top" src={disney} alt={disney}/>
             </div>
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
-              <img class="card-img-top" src={hamleys} alt="Card image cap" />
+              <img class="card-img-top" src={hamleys} alt={hamleys} />
             </div>
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
-              <img class="card-img-top" src={fantasy} alt="Card image cap" />
+              <img class="card-img-top" src={fantasy} alt={fantasy}/>
             </div>
             <div className="card" style={{ width: "18rem", padding: "10px" }}>
-              <img class="card-img-top" src={toys} alt="Card image cap" />
+              <img class="card-img-top" src={toys} alt={toys} />
             </div>
           </div>
           <br />
@@ -704,6 +698,7 @@ function Home() {
                   className="card-img-top"
                   src={latestpro1}
                   style={{ height: "18rem", marginLeft: "30px" }}
+                  alt={latestpro1}
                 />
               </div>
               <div className="proinfo" style={{ textAlign: "center" }}>
@@ -722,6 +717,7 @@ function Home() {
                   className="card-img-top"
                   src={latestpro4}
                   style={{ height: "18rem" }}
+                  alt={latestpro4}
                 />
               </div>
               <div className="proinfo" style={{ textAlign: "center" }}>
@@ -740,10 +736,11 @@ function Home() {
                   className="card-img-top"
                   src={latestpro3}
                   style={{ height: "18rem" }}
+                  alt={latestpro3}
                 />
               </div>
               <div className="proinfo" style={{ textAlign: "center" }}>
-                <div className="pronm">Ceramic Monster Figurine</div>
+                <div className="pronm"><a href="/proddetailss" style={{color:"black",textDecoration:"none"}}>Ceramic Monster Figurine</a></div>
                 <div className="proprice">
                   <strong>US$ 24.99</strong>
                 </div>
@@ -758,10 +755,11 @@ function Home() {
                   className="card-img-top"
                   src={latestpro2}
                   style={{ height: "18rem" }}
+                  alt={latestpro2}
                 />
               </div>
               <div className="proinfo" style={{ textAlign: "center" }}>
-                <div className="pronm">Ceramic Monster Figurine</div>
+                <div className="pronm"><a href="/proddetails" style={{color:"black",textDecoration:"none"}}>Ceramic Monster Figurine</a></div>
                 <div className="proprice">
                   <strong>US$ 24.99</strong>
                 </div>

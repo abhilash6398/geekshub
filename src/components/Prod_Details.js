@@ -39,27 +39,27 @@ export default function ProdDetails() {
                   </div>
                   <ul class="preview-thumbnail nav nav-tabs">
                     <li class="active">
-                      <a data-target="#pic-1" data-toggle="tab">
+                      <a data-target="#pic-1" data-toggle="tab" href="# " >
                         <img src={latestpro2} alt={latestpro2} />
                       </a>
                     </li>
                     <li>
-                      <a data-target="#pic-2" data-toggle="tab">
+                      <a data-target="#pic-2" data-toggle="tab" href="# ">
                         <img src={latestpro2} alt={latestpro2} />
                       </a>
                     </li>
                     <li>
-                      <a data-target="#pic-3" data-toggle="tab">
+                      <a data-target="#pic-3" data-toggle="tab" href="# ">
                         <img src={latestpro2} alt={latestpro2} />
                       </a>
                     </li>
                     <li>
-                      <a data-target="#pic-4" data-toggle="tab">
+                      <a data-target="#pic-4" data-toggle="tab" href="# ">
                         <img src={latestpro2} alt={latestpro2} />
                       </a>
                     </li>
                     <li>
-                      <a data-target="#pic-5" data-toggle="tab">
+                      <a data-target="#pic-5" data-toggle="tab" href="# ">
                         <img src={latestpro2} alt={latestpro2} />
                       </a>
                     </li>

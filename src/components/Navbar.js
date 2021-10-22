@@ -2,7 +2,7 @@ import React from "react";
 import "../style/Navbar.css";
 import { Navbar, Container, NavDropdown } from "react-bootstrap";
 import logo from "../assets/images/logo.png";
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 const Nav = () => {
   const logOut = () => {
     localStorage.clear();

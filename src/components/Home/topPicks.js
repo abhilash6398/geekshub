@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Banimg } from "../../assets/images";
+// import { Banimg } from "../../assets/images";
 import axios from "./Axios";
 // import "../style/topPicks.css";
 // import "../assets/css/style.css";
