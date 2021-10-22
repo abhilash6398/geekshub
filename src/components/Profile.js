@@ -7,7 +7,7 @@ import useToken from "./useToken";
 
 const Profile = () => {
   const userToken = useToken();
-  const userData = userToken.userData.user;
+  // const userData = userToken.userData.user;
 
   // useEffect(() => {
   // const user = fetch('http://3.109.247.241:6678/api/users/profile/' + userToken.id, {

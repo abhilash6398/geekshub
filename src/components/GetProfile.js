@@ -33,7 +33,7 @@ const GetProfile = () => {
 
       .catch((error) => console.warn(error));
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
-  }, []);
+  }, );
 
   return (
     <div className="container">
