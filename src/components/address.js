@@ -36,65 +36,83 @@ const Address = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="col-xd-6">
-        <div
-          className="col-sm-2"
-          style={{
-            textAlign: "right",
-            marginLeft: "750px",
-            fontStyle: "initial",
-          }}
-        >
-          <br />
-          <button className="btn btn-warning">
-            <a
-              href="/addaddress"
-              style={{
-                color: "black",
-                textDecoration: "none",
-                fontWeight: "bold",
-              }}
-            >
-              ADD ADDRESS
-            </a>
-          </button>
-        </div>
+    <>
+      <div className="pgaddressrow">
+        <h1 className="heading">Saved Address</h1>
+        <h4 className="smheading">
+          <a href="/home" style={{ textDecoration: "none" }}>
+            Home
+          </a>{" "}
+          / Saved Address
+        </h4>
       </div>
-      <div
-        className="card col-xd-6"
-        style={{ marginLeft: "25px", width: "50%", textAlign: "left" }}
-      >
-        {/* <h1>Address Listing: </h1> */}
-        {address.map((data) => {
-          return (
-            <div className="container">
-              <div className="profilinputs">
-                <div className="imvendwrap">
-                  <div className="row clearfix">
-                    <div className="nameconbox">
-                      <h4>
-                        Full Name: {data.firstName} {data.lastName}
-                      </h4>
-                    </div>
-                    <div className="nameconbox">
-                      <h4>Address: {data.address}</h4>
-                      <h5> Landmark: {data.landmark}</h5>
-                      <h6> City: {data.city}</h6>
-                      <p> State: {data.state}</p>
-                      <p> Pincode: {data.pincode}</p>
-                    </div>
-                    <div className="nameconbox">
-                      <h4>Mobile: {data.mobile}</h4>
+      <div className="container">
+        <div className="col-xd-6">
+          <div
+            className="col-sm-2"
+            style={{
+              textAlign: "right",
+              marginLeft: "975px",
+              padding: "20px",
+              fontStyle: "initial",
+            }}
+          >
+            <br />
+            <button className="btn btn-warning">
+              <a
+                href="/addaddress"
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
+              >
+                ADD ADDRESS
+              </a>
+            </button>
+          </div>
+        </div>
+        <div
+          className="card col-xd-12"
+          style={{ marginLeft: "25px", width: "100%", textAlign: "left" }}
+        >
+          {/* <h1>Address Listing: </h1> */}
+          {address.map((data) => {
+            return (
+              <>
+                <div className="container">
+                  <div className="profilinputs">
+                    <div className="imvendwrap">
+                      <div className="row clearfix">
+                        <div className="nameconbox">
+                          <h4>
+                            Full Name: {data.firstName} {data.lastName}
+                          </h4>
+                        </div>
+                        <div className="nameconbox">
+                          <h4>Address: {data.address}</h4>
+                          <h5> Landmark: {data.landmark}</h5>
+                          <h6> City: {data.city}</h6>
+                          <p> State: {data.state}</p>
+                          <p> Pincode: {data.pincode}</p>
+                        </div>
+                        <div className="nameconbox">
+                          <h4>Mobile: {data.mobile}</h4>
+                        </div>
+                        {/* <div className="nameconbox">
+                      <button className="btn btn-primary">EDIT</button> | 
+                      <button className="btn btn-danger">DELETE</button>
+                    </div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              </>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

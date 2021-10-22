@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { withRouter } from "react-router";
 import useToken from "./useToken";
+import { Link, useHistory } from "react-router-dom";
 
 function AddAddress() {
   const userToken = useToken();
+  // const history = useHistory([]);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
@@ -44,6 +47,11 @@ function AddAddress() {
     }).then((result) => {
       console.warn("result", result);
     });
+
+    // const history = useHistory();
+    // history.push('/address');
+
+    // history.push("/address");
   }
   // const requestOptions = {
   //   method: "POST",
@@ -306,4 +314,4 @@ function AddAddress() {
   );
 }
 
-export default AddAddress;
+export default withRouter(AddAddress);
